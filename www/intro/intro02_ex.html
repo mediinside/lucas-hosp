@@ -1,0 +1,129 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(1,2);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?> 
+			<div class="contents">
+				<h1 class="pageTitle">루카스 <span class="colorIdt">치료진</span></h1>
+				<p class="subTitle2">병원을 찾으신 분들의 회복을 지원하는 루카스 식구들을 소개합니다.</p>
+				<p class="colorBlack subSection2">
+					효과적이고 전문적인 도움을 드리기 위해 정신건강의학과 전문의, 정신보건 간호사, 정신보건 사회복지사, <br />
+					전문 상담사, 임상심리사 및 외부 치료자원이 협조하여 팀으로 활동하고 있습니다.
+				</p>
+
+				<div class="tab subSection">
+					<p class="mobBtn"><button type="button">전체치료진</button></p>
+					<ul class="tabList">
+						<li class="on"><a href="#">전체치료진</a></li>
+						<li><a href="#">전문치료진</a></li>
+						<li><a href="#">간호부</a></li>
+						<li><a href="#">사회복지과</a></li>
+						<li><a href="#">자문강사</a></li>
+						<li><a href="#">임상지원부서</a></li>
+						<li><a href="#">행정지원부서</a></li>
+					</ul>
+				</div>
+				<div class="tabCont docSection subSection">
+					<div class="current">
+						<img src="/images/contents/img_intro02_ex.jpg" alt="" />
+					</div>
+					<div>
+						<div class="contSection"><h2 class="subTitle">정신건강의학과</h2>
+							<div class="section leftImg ">
+								<div class="contWrap imgCont">
+									<img src="http://lukasweb.cafe24.com/common/doctor/14454781802596.jpg" alt="김승겸">
+								</div>
+								<div class="contWrap txtCont">
+									<p class="docName"><strong>김승겸</strong> 병원장</p>
+									<p class="colorBlack">정신건강의학과 전문의</p>
+									<div class="btnWrap">
+										<span><a href="intro02_view.html?dr_idx=1" class="btnL btnLb">자세히 보기</a></span>
+									</div>
+								</div>
+							</div>
+							<div class="section leftImg subSection">
+								<div class="contWrap imgCont">
+									<img src="/images/no_image.jpg" alt="이미지 없음">
+								</div>
+								<div class="contWrap txtCont">
+									<p class="docName"><strong>유관순</strong> 간호부장</p>
+									<p class="colorBlack">
+									정신건강의학과 비전문의								</p>
+									<div class="btnWrap">
+										<span><a href="intro02_view.html?dr_idx=3" class="btnL btnLb">자세히 보기</a></span>
+									</div>
+								</div>
+							</div>
+							</div><div class="contSection"><h2 class="subTitle">한방과</h2>
+							<div class="section leftImg ">
+								<div class="contWrap imgCont">
+									<img src="http://lukasweb.cafe24.com/common/doctor/14454868615836.jpg" alt="홍길동">
+								</div>
+								<div class="contWrap txtCont">
+									<p class="docName"><strong>홍길동</strong> 과장</p>
+									<p class="colorBlack">
+									한방과 한의사</p>
+									<div class="btnWrap">
+										<span><a href="intro02_view.html?dr_idx=2" class="btnL btnLb">자세히 보기</a></span>
+									</div>
+								</div>
+							</div>
+							</div><div class="contSection"><h2 class="subTitle">내과</h2>
+							<div class="section leftImg ">
+								<div class="contWrap imgCont">
+									<img src="/images/no_image.jpg" alt="이미지 없음"></div>
+								<div class="contWrap txtCont">
+									<p class="docName"><strong>루카스</strong> 실장</p>
+									<p class="colorBlack">내과 비전문의</p>
+									<div class="btnWrap">
+										<span><a href="intro02_view.html?dr_idx=4" class="btnL btnLb">자세히 보기</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="contSection">
+						<h2 class="subTitle">간호부 단체사진</h2>
+							<div class="section imgItem2 docCaption">
+								<span>
+									<img src="http://lukasweb.cafe24.com/common/doctor/14454856471986.jpg" alt="">						<p class="caption"> 단체사진</p>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="contSection">
+						<h2 class="subTitle">사회복지과 단체사진</h2>
+							<div class="section imgItem2 docCaption">
+								<span>
+									<img src="http://lukasweb.cafe24.com/common/doctor/14454856471986.jpg" alt="">						<p class="caption"> 단체사진</p>
+								</span>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+
+				
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

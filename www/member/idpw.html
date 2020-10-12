@@ -1,0 +1,49 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(7,3);
+});
+</script>
+</head>
+
+<body class="member">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?> 
+			<? include_once $GP -> INC_WWW . '/snb.php'; ?> 
+			<div class="contents">
+				<div class="findBox idFind">
+					<form name="find-id-form" id="find-id-form" method="post" action="?">
+						<h2 class="subTitle">아이디 찾기</h2>
+						<p class="findName"><input type="text" class="txt" title="이름 입력" placeholder="이름" id="mb_name" name="mb_name" /></p>
+						<p class="findPhone"><input type="text" class="txt" title="핸드폰 입력" placeholder="핸드폰" id="mb_mobile" name="mb_mobile" /></p>
+						<div class="btnWrap">
+							<span><a href="#;" id="id_find" class="btnL btnFindId">아이디 찾기</a></span>
+						</div>
+					</form>
+				</div>
+				<div class="findBox pwFind">
+					<form name="find-pw-form" id="find-pw-form" method="post" action="?">
+						<h2 class="subTitle">패스워드 찾기</h2>
+						<p class="findName"><input type="text" class="txt" title="아이디 입력" placeholder="아이디"  id="mb_id" name="mb_id" /></p>
+						<p class="findPhone"><input type="text" class="txt" title="핸드폰 입력" placeholder="핸드폰" id="mb_mobile" name="mb_mobile" /></p>
+						<div class="btnWrap">
+							<span><a href="#;" id="pwd_find" class="btnL btnFindPw">패스워드 찾기</a></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+<script type="text/javascript" src="/js/jquery.validate.js"></script>
+<script type="text/javascript" src="/js/jquery.alphanumeric.js"></script>
+<script type="text/javascript" src="/js/admin/common.js"></script>
+<script type="text/javascript" src="/js/mem/mem_find.js"></script>
+</html>

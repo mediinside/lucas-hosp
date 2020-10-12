@@ -1,0 +1,109 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+
+	include_once $GP -> CLS . 'class.doctor.php';
+	$C_Doctor = new Doctor();
+
+	$args = "";
+	$args['dr_idx'] 	= $_GET['dr_idx'];
+	$rst = $C_Doctor ->Doctor_Info($args);
+
+	if($rst) {
+		extract($rst);
+		$dr_history  = $C_Func->dec_contents_view($dr_history);
+		$dr_history1  = $C_Func->dec_contents_view($dr_history1);
+
+		$cn_arr = explode(",", $dr_position);
+		
+		$dr_img = '';
+		if($dr_face_img !=  '') {
+			$dr_img = "<img src='" . $GP -> UP_DOCTOR_URL . $dr_face_img . "' alt='" .  $dr_name ."' />";
+		}else{
+			$dr_img = "<img src=\"/images/no_image.jpg\" alt=\"이미지 없음\" />";
+		}
+	}
+	
+	if($_GET['dr_type'] != '') {
+		$dr_type = $_GET['dr_type'];
+	}
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(1,2);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?> 
+			<div class="contents">
+				<h1 class="pageTitle">루카스 <span class="colorIdt">치료진</span></h1>
+				<p class="subTitle2">병원을 찾으신 분들의 회복을 지원하는 루카스 식구들을 소개합니다.</p>
+				<p class="colorBlack subSection2">
+					효과적이고 전문적인 도움을 드리기 위해 정신건강의학과 전문의, 정신보건 간호사, 정신보건 사회복지사, <br />
+					전문 상담사, 임상심리사 및 외부 치료자원이 협조하여 팀으로 활동하고 있습니다.
+				</p>
+				<div class="tab subSection">
+					<p class="mobBtn"><button type="button">전문의료진</button></p>
+					<ul class="tabList">
+						<li <?if($dr_type == ''){ echo "class='on'"; } ?>><a href="intro02_all.html">전체치료진</a></li>
+						<?
+							foreach($GP -> DOCTOR_TYPE  as $key => $val) {
+						?>
+						<li <?if($dr_type == $key){ echo "class='on'"; } ?>><a href="intro02.html?dr_type=<?=$key?>"><?=$val?></a></li>
+						<? } ?>
+					</ul>
+				</div>
+				<div class="docSection">
+					<div class="current contSection">
+
+						<h2 class="subTitle"><?=$GP -> CLINIC_TYPE[$dr_clinic]?></h2>
+						<div class="section leftImg">
+							<div class="contWrap imgCont">
+								<?=$dr_img?>
+							</div>
+							<div class="contWrap txtCont">
+								<p class="docName"><strong><?=$dr_name?></strong> 
+								<?
+								$str = "";
+								foreach ($cn_arr as $key => $val) {
+									$str .= $GP -> DOCTOR_POSITION[$val] . ",";
+								}
+								echo rtrim($str , ",");
+								?></p>
+								<p class="colorBlack">
+								<?=$GP -> CLINIC_TYPE[$dr_clinic]?> 
+								<?
+									if($dr_special != "N") {
+										echo $GP -> DOCTOR_SPECIAL[$dr_special];
+									}
+								?>
+								</p>
+								<div class="roundBox">
+									<p class="iconTitle4"><span class="colorIdt">전문분야 :</span> <?=$dr_history1?></p>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="subSection">
+								<p class="profileTitle">약력</p>
+								<div class="profileCont" style="display: block;">
+									<?=$dr_history?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

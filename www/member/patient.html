@@ -1,0 +1,29 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(7,3);
+});
+</script>
+</head>
+
+<body class="member">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?> 
+			<div class="contents">
+				<h1 class="pageTitle"><span class="colorIdt">환자</span>권리장전</h1>
+				<div class="privacy">
+					<? include_once "agree4.txt";?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+
+	$index_page = "community04.html";
+	$query_page = "query.php";
+
+	if(!$jb_code) 
+		$jb_code="40";
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(6,4);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?> 
+			<div class="contents">
+				<h1 class="pageTitle"><span class="colorIdt">재활회복 </span> 리포트</h1>
+				<p class="iconTitle1">루카스병원 재활회복 리포트 입니다.</p>
+				<!--게시판시작 -->
+				<?php include $GP -> INC_PATH ."/board_inc.php"; ?>
+				<!-- 게시판끝 -->
+
+				
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

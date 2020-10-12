@@ -1,0 +1,185 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';
+	include_once($GP->CLS."class.list.php");
+	include_once($GP -> CLS."/class.doctor.php");
+	$C_ListClass 	= new ListClass;
+	$C_Doctor 	= new Doctor;
+
+	//error_reporting(E_ALL);
+	//@ini_set("display_errors", 1);
+
+
+
+	$args = array();
+	$args['show_row'] = 10;
+	$args['orderby'] = "dr_clinic asc, dr_desc desc";
+	$data = "";
+	$data = $C_Doctor->Doctor_List(array_merge($_GET,$_POST,$args));
+
+	$data_list 		= $data['data'];
+	$page_link 		= $data['page_info']['link'];
+	$page_search 	= $data['page_info']['search'];
+	$totalcount 	= $data['page_info']['total'];
+
+	$totalpages 	= $data['page_info']['totalpages'];
+	$nowPage 		= $data['page_info']['page'];
+	$totalcount_l 	= number_format($totalcount,0);
+
+	$data_list_cnt 	= count($data_list);
+
+	//의료진 단체사진
+	$args = "";
+	$args['dtg_type'] = $_GET['dr_type'];
+	$gr_data = $C_Doctor->Doctro_Gr_List_F($args);
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(1,2);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?>
+			<div class="contents">
+				<h1 class="pageTitle">루카스 <span class="colorIdt">치료진</span></h1>
+				<p class="subTitle2">병원을 찾으신 분들의 회복을 지원하는 루카스 가족을 소개합니다.</p>
+				<p class="colorBlack subSection2">
+					효과적이고 전문적인 도움을 드리기 위해 정신건강의학과 전문의, 정신건강간호사, 정신건강사회복지사,<br />
+					전문 상담사, 임상심리사 및 외부 치료자원이 협조하여 팀으로 활동하고 있습니다.
+				</p>
+				<div class="tab subSection">
+					<p class="mobBtn"><button type="button">전문치료진</button></p>
+					<ul class="tabList">
+						<li <?if($_GET['dr_type'] == ''){ echo "class='on'"; } ?>><a href="intro02_all.html">전체치료진</a></li>
+						<?
+							foreach($GP -> DOCTOR_TYPE  as $key => $val) {
+						?>
+						<li <?if($_GET['dr_type'] == $key){ echo "class='on'"; } ?>><a href="?dr_type=<?=$key?>"><?=$val?></a></li>
+						<? } ?>
+					</ul>
+				</div>
+				<div class=" docSection">
+
+					<?
+					$ck_center = "";
+					$k=0;
+					for ($i = 0 ; $i < $data_list_cnt ; $i++) {
+						$dr_idx 			= $data_list[$i]['dr_idx'];
+						$dr_name			= $data_list[$i]['dr_name'];
+						$dr_center		= $data_list[$i]['dr_center'];
+						$dr_clinic			= $data_list[$i]['dr_clinic'];
+						$dr_thesis		= $data_list[$i]['dr_thesis'];
+						$dr_face_img		= $data_list[$i]['dr_face_img'];
+						$dr_choice		= $data_list[$i]['dr_choice'];
+						$dr_special		= $data_list[$i]['dr_special'];
+						$dr_regdate	 	= $data_list[$i]['dr_regdate'];
+						$dr_position		= $data_list[$i]['dr_position'];
+						$dr_desc 			= $data_list[$i]['dr_desc'];
+                        $dr_history 		= $data_list[$i]['dr_history'];
+                        $dr_history2 		= $data_list[$i]['dr_history2'];
+						$dr_history		= $C_Func->dec_contents_edit($dr_history);
+
+						$cn_arr = explode(",", $dr_position);
+
+						if($k == 0) {
+							$ck_center = $dr_clinic;
+							echo "<div class=\"contSection\"><h2 class=\"subTitle\">" . $GP -> CLINIC_TYPE[$dr_clinic]. "</h2>
+									";
+						}
+
+						$dr_img = '';
+						if($dr_face_img !=  '') {
+							$dr_img = "<img src='" . $GP -> UP_DOCTOR_URL . $dr_face_img . "' alt='" .  $dr_name ."' />";
+						}else{
+							$dr_img = "<img src=\"/images/no_image.jpg\" alt=\"이미지 없음\" />";
+						}
+
+						if($ck_center != $dr_clinic) {
+							$ck_center = $dr_clinic;
+							$k = 0;
+							echo "</div><div class=\"contSection\"><h2 class=\"subTitle\">" . $GP -> CLINIC_TYPE[$dr_clinic]. "</h2>";
+						}
+					?>
+						<div class="section leftImg <? if($k != 0) { echo "subSection"; }?>">
+							<div class="contWrap imgCont">
+								<?=$dr_img?>
+							</div>
+							<div class="contWrap txtCont">
+								<p class="docName"><strong><?=$dr_name?></strong>
+								<?
+									if($_GET['dr_type'] == "B") {
+								?>
+								<span><?=$dr_history2?></span>
+								<?
+									}
+								?>
+								<?
+								$str = "";
+								foreach ($cn_arr as $key => $val) {
+									$str .= $GP -> DOCTOR_POSITION[$val] . ",";
+								}
+								echo rtrim($str , ",");
+								?>
+								</p>
+								<p class="colorBlack">
+								<?=$dr_history2?>
+								<?
+									if($dr_special != "N") {
+										echo $GP -> DOCTOR_SPECIAL[$dr_special];
+									}
+								?>
+								</p>
+								<? if($_GET['dr_type'] == "A") {?>
+								<div class="btnWrap">
+									<span><a href="intro02_view.html?dr_idx=<?=$dr_idx?>" class="btnL btnLb">자세히 보기</a></span>
+								</div>
+								<? } ?>
+							</div>
+						</div>
+						<?
+							$k++;
+						}
+						?>
+
+					</div>
+					<?
+						if($gr_data) {
+					?>
+					<div class="contSection">
+						<h2 class="subTitle"><?=$GP -> DOCTOR_TYPE[$_GET['dr_type']]?> 단체사진</h2>
+						<div class="section imgItem2 docCaption">
+							<?
+								for($j=0; $j<count($gr_data); $j++) {
+									$gr_img = $gr_data[$j]['dtg_image'];
+									$gr_clinic = $gr_data[$j]['dtg_clinic'];
+
+									$gr_img = "<img src='" . $GP -> UP_DOCTOR_URL . $gr_img . "' alt='' />";
+							?>
+							<span>
+								<?=$gr_img?>
+								<p class="caption"><?=$GP -> DOCTOR_GR_CLINIC[$gr_clinic]?></p>
+							</span>
+							<?
+								}
+							?>
+						</div>
+					</div>
+					<?
+						}
+					?>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

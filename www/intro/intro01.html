@@ -1,0 +1,79 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(1,1);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?> 
+			<div class="contents">
+				<h1 class="pageTitle">루카스의 <span class="colorIdt">생각</span></h1>
+				<div class="contSection">
+					<h2 class="subTitle">임하는 <strong>마음</strong></h2>
+					<div class="section rightImg lukasMind">
+						<div class="contWrap txtCont">
+							<p class="subTitle3"><span class="colorIdt">사람이라면 누구나</span> 자기를 돌보고 아끼는 마음을 지니고 있다고 믿습니다.</p>
+							<p>지금은 아프고 병든 사람도 어디엔가는 <br /><strong>변화와 성장의 씨앗을 품고 있다</strong>고 믿습니다.</p>
+							<p>그 씨앗을 찾아내어 <strong>싹을 틔우기 위해 <br />함께, 쉼 없이, 고민하고 노력</strong>하겠습니다.</p>
+						</div>
+						<div class="contWrap imgCont">
+							<img src="/images/contents/img_intro01_01.jpg" alt="">
+							<div class="caption">
+								<p class="position">병원장</p>
+								<span><img src="/images/contents/img_intro01_01.gif" alt="김승겸" /></span>
+								<p class="subject">정신건강의학과 전문의</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contSection">
+					<h2 class="subTitle"><strong>미션</strong>과 <strong>핵심가치</strong></h2>
+					<div class="section">
+						<div class="lukasGoal">
+							<span class="image"><img src="/images/contents/img_intro01_02.gif" alt="" /></span>
+							<div class="sec01">
+								<div class="item">
+									<p class="title">회복주체 존중</p>
+									<p class="con">환자를 증상을 가진 사람 이전에<br class="mobHide"/> 회복의 주체로 존중하며<br class="mobHide"/> 치료진은 전문성을 갖춘<br class="mobHide"/> 회복의 파트너로서 협력한다. </p>
+								</div>
+								<div class="item">
+									<p class="title">공감과 조언</p>
+									<p class="con">환자의 입장에서 듣고<br class="mobHide"/> 환자의 입장을 정확히 이해하되<br class="mobHide"/> 회복을 돕는 전문적 판단과<br class="mobHide"/> 조언을 함께 전달한다. </p>
+								</div>
+							</div>
+							<div class="sec02">
+								<div class="item">
+									<p class="title">삶의 개선</p>
+									<p class="con">증상 완화 이후 개인의 삶 자체의<br class="mobHide"/> 회복을 위해 개인이 지닌 장점과<br class="mobHide"/> 능력을 성장시키는 데 초점을 둔다. </p>
+								</div>
+								<div class="item">
+									<p class="title">과학적 관점</p>
+									<p class="con">평가와 치료 과정에서 과학적<br class="mobHide"/> 근거와 데이터를 바탕으로<br class="mobHide"/> 최적의 방법을 선택하여 실행한다.</p>
+								</div>
+								<div class="item">
+									<p class="title">치료팀 접근</p>
+									<p class="con">신체-심리-사회적 영역 등 다양한<br class="mobHide"/> 분야의 전문가들이 치료팀을 이루어<br class="mobHide"/> 다각적이고 포괄적으로 개입한다.</p>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

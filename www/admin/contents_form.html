@@ -1,0 +1,552 @@
+<?php
+	include_once("../_init.php");
+	include_once($GP -> INC_ADM_PATH."/head.php");
+?>
+<body>
+<div class="Wrap">
+		<? include_once($GP -> INC_ADM_PATH."/header.php"); ?>
+		<div class="boxContentBody">
+			<p class="addOption">
+				<button type="button" class="btnM btnGray">전체선택</button>
+				<button type="button" class="btnM btnGray">선택삭제</button>
+			</p>
+			<div class="contentsAdd">
+				<div class="section">
+					<table>
+						<colgroup>
+							<col style="width:230px;" />
+							<col />
+							<col style="width:400px;" />
+						</colgroup>
+						<tr>
+							<td>
+								페이지 기본 정보 (제목, 현재 위치)
+							</td>
+							<td>
+								<input type="text" class="txt" placeholder="페이지 제목 입력" style="width:98%;" />
+							</td>
+							<td>
+								<select>
+									<option>1뎁스</option>
+								</select>
+								<select>
+									<option>2뎁스</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<div class="btnWrap">
+						<span class="btnRight">
+							<button type="button" class="btnM btnIdt">섹션추가</button>
+						</span>
+					</div>
+				</div>
+				
+				<div class="section">
+					<table>
+						<colgroup>
+							<col style="width:35px;" />
+							<col style="width:12%;" />
+							<col />
+							<col style="width:400px;" />
+						</colgroup>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								섹션 제목
+							</td>
+							<td>
+								<input type="text" class="txt" placeholder="섹션 제목 입력" style="width:98%;" />
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+								<p>
+									<select>
+										<option>type1</option>
+										<option>type2</option>
+										<option>type3</option>
+									</select>
+									<input type="text" class="txt" placeholder="버튼명 입력" style="width:90px;" />
+									<input type="text" class="txt" placeholder="url 입력" style="width:180px;" />
+								</p>
+								<p>
+									<select>
+										<option>type1</option>
+										<option>type2</option>
+										<option>type3</option>
+									</select>
+									<input type="text" class="txt" placeholder="버튼명 입력" style="width:90px;" />
+									<input type="text" class="txt" placeholder="url 입력" style="width:180px;" />
+								</p>
+								<p>
+									<select>
+										<option>type1</option>
+										<option>type2</option>
+										<option>type3</option>
+									</select>
+									<input type="text" class="txt" placeholder="버튼명 입력" style="width:90px;" />
+									<input type="text" class="txt" placeholder="url 입력" style="width:180px;" />
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4">
+								<select>
+									<option>항목추가</option>
+									<option>일반</option>
+									<option>좌우배치</option>
+									<option>왼쪽 이미지</option>
+									<option>오른쪽 이미지</option>
+									<option>이미지</option>
+									<option>리스트 형태</option>
+									<option>탭 형태</option>
+									<option>아코디언 형태</option>
+									<option>페이지 주요 문구</option>
+									<option>최종 버튼</option>
+								</select>
+								<select> 
+									<option>아이템 1</option>
+									<option>아이템 2</option>
+									<option>아이템 3</option>
+									<option>아이템 4</option>
+									<option>아이템 5</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<div class="btnWrap">
+						<span class="btnRight">
+							<button type="button" class="btnM btnIdt">섹션추가</button>
+						</span>
+					</div>
+				</div>
+
+				<div class="section">
+					<table>
+						<colgroup>
+							<col style="width:35px;" />
+							<col style="width:12%;" />
+							<col />
+							<col style="width:400px;" />
+						</colgroup>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								섹션 제목
+							</td>
+							<td>
+								<input type="text" class="txt" placeholder="섹션 제목 입력" style="width:98%;" />
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								일반
+							</td>
+							<td>
+								<p>
+									<select>
+										<option>서브타이틀 없음</option>
+										<option>서브타이틀2</option>
+										<option>서브타이틀3</option>
+									</select>
+									<input type="text" class="txt" placeholder="서브타이틀 입력" />
+								</p>
+								<p>
+									<textarea rows="3" cols="20" placeholder="일반 텍스트 입력"></textarea>
+								</p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								좌우배치
+							</td>
+							<td>
+								<p>
+									<select>
+										<option>서브타이틀 없음</option>
+										<option>서브타이틀2</option>
+										<option>서브타이틀3</option>
+									</select>
+									<input type="text" class="txt" placeholder="서브타이틀 입력" />
+								</p>
+								<p>
+									<textarea rows="3" cols="20" placeholder="일반 좌측 텍스트 입력"></textarea>
+								</p>
+								<p>
+									<textarea rows="3" cols="20" placeholder="일반 우측 텍스트 입력"></textarea>
+								</p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								왼쪽 이미지
+							</td>
+							<td>
+								<p>
+									<select>
+										<option>서브타이틀 없음</option>
+										<option>서브타이틀2</option>
+										<option>서브타이틀3</option>
+									</select>
+									<input type="text" class="txt" placeholder="서브타이틀 입력" />
+								</p>
+								<p><input type="file" placeholder="파일등록" /></p>
+								<p><input type="text" class="txt" placeholder="이미지 가로 크기 입력" /></p>
+								<p><textarea rows="3" cols="20" placeholder="텍스트 입력"></textarea></p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								오른쪽 이미지
+							</td>
+							<td>
+								<p>
+									<select>
+										<option>서브타이틀 없음</option>
+										<option>서브타이틀2</option>
+										<option>서브타이틀3</option>
+									</select>
+									<input type="text" class="txt" placeholder="서브타이틀 입력" />
+								</p>
+								<p><input type="file" placeholder="파일등록" /></p>
+								<p><input type="text" class="txt" placeholder="이미지 가로 크기 입력" /></p>
+								<p><textarea rows="3" cols="20" placeholder="텍스트 입력"></textarea></p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								이미지
+							</td>
+							<td>
+								<p>
+									<select>
+										<option>서브타이틀 없음</option>
+										<option>서브타이틀2</option>
+										<option>서브타이틀3</option>
+									</select>
+									<input type="text" class="txt" placeholder="서브타이틀 입력" />
+								</p>
+								<p><input type="file" placeholder="파일등록" /></p>
+								<p><input type="file" placeholder="파일등록" /></p>
+								<p><input type="file" placeholder="파일등록" /></p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								리스트 형태
+							</td>
+							<td>
+								<p>
+									<select>
+										<option>서브타이틀 없음</option>
+										<option>서브타이틀2</option>
+										<option>서브타이틀3</option>
+									</select>
+									<input type="text" class="txt" placeholder="서브타이틀 입력" />
+								</p>
+								<p><textarea rows="3" cols="20" placeholder="텍스트 입력"></textarea></p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								탭 형태
+							</td>
+							<td>
+								<p>
+									<select>
+										<option>서브타이틀 없음</option>
+										<option>서브타이틀2</option>
+										<option>서브타이틀3</option>
+									</select>
+									<input type="text" class="txt" placeholder="서브타이틀 입력" />
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="탭 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="탭 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="탭 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="탭 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="탭 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="탭 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="탭 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="탭 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="탭 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="탭 내용 입력"></textarea>
+								</p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								아코디언 형태
+							</td>
+							<td>
+								<p>
+									<select>
+										<option>서브타이틀 없음</option>
+										<option>서브타이틀2</option>
+										<option>서브타이틀3</option>
+									</select>
+									<input type="text" class="txt" placeholder="서브타이틀 입력" />
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="아코디언 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="아코디언 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="아코디언 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="아코디언 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="아코디언 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="아코디언 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="아코디언 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="아코디언 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="아코디언 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="아코디언 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="아코디언 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="아코디언 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="아코디언 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="아코디언 내용 입력"></textarea>
+								</p>
+								<p>
+									<input type="text" class="txt" placeholder="아코디언 제목 입력" style="width:98%;margin:0 0 5px;" />
+									<textarea rows="3" cols="20" placeholder="아코디언 내용 입력"></textarea>
+								</p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								동영상
+							</td>
+							<td>
+								<p>
+									<select>
+										<option>서브타이틀 없음</option>
+										<option>서브타이틀2</option>
+										<option>서브타이틀3</option>
+									</select>
+									<input type="text" class="txt" placeholder="서브타이틀 입력" />
+								</p>
+								<p><input type="text" class="txt" placeholder="공유 url 입력" style="width:98%;" /></p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								주요 문구
+							</td>
+							<td>
+								<p><input type="text" class="txt" placeholder="문구 입력" style="width:98%;" /></p>
+							</td>
+							<td>
+								<select>
+									<option>버튼추가</option>
+									<option>버튼 1개</option>
+									<option>버튼 2개</option>
+									<option>버튼 3개</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="chk" /></td>
+							<td>
+								최종 버튼
+							</td>
+							<td colspan="2">
+								<p>
+									<select>
+										<option>버튼 갯수</option>
+										<option>버튼 1개</option>
+										<option>버튼 2개</option>
+										<option>버튼 3개</option>
+									</select>
+								</p>
+								<p>
+									<select>
+										<option>버튼형태</option>
+										<option>type1</option>
+										<option>type2</option>
+										<option>type3</option>
+									</select>
+									<input type="text" class="txt" placeholder="버튼명 입력" style="width:15%;" />
+									<input type="text" class="txt" placeholder="url 입력" style="width:60%;" />
+								</p>
+								<p>
+									<select>
+										<option>버튼형태</option>
+										<option>type1</option>
+										<option>type2</option>
+										<option>type3</option>
+									</select>
+									<input type="text" class="txt" placeholder="버튼명 입력" style="width:15%;" />
+									<input type="text" class="txt" placeholder="url 입력" style="width:60%;" />
+								</p>
+								<p>
+									<select>
+										<option>버튼형태</option>
+										<option>type1</option>
+										<option>type2</option>
+										<option>type3</option>
+									</select>
+									<input type="text" class="txt" placeholder="버튼명 입력" style="width:15%;" />
+									<input type="text" class="txt" placeholder="url 입력" style="width:60%;" />
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4">
+								<select>
+									<option>항목추가</option>
+									<option>일반</option>
+									<option>좌우배치</option>
+									<option>왼쪽 이미지</option>
+									<option>오른쪽 이미지</option>
+									<option>이미지</option>
+									<option>리스트 형태</option>
+									<option>탭 형태</option>
+									<option>아코디언 형태</option>
+									<option>페이지 주요 문구</option>
+									<option>최종 버튼</option>
+								</select>
+								<select> 
+									<option>아이템 1</option>
+									<option>아이템 2</option>
+									<option>아이템 3</option>
+									<option>아이템 4</option>
+									<option>아이템 5</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<div class="btnWrap">
+						<span class="btnRight">
+							<button type="button" class="btnM btnIdt">섹션추가</button>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="btnWrap ">
+				<span class="btnLeft">
+					<button type="button" class="btnM btnGray">전체선택</button>
+					<button type="button" class="btnM btnGray">선택삭제</button>
+				</span>
+				<span class="btnRight">
+					<button type="button" class="btnM btnIdt">저장</button>
+					<button type="button" class="btnM btnGray">취소</button>
+				</span>
+			</div>
+		</div>
+		<? include_once($GP -> INC_ADM_PATH."/footer.php"); ?>
+	</div>
+</div>
+</body>
+</html>

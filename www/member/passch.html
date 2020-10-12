@@ -1,0 +1,107 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+	include_once $GP -> INC_WWW . '/count_inc.php'; 	
+	//include_once $GP -> INC_WWW . '/inc.login_check.php';    
+	
+	include_once($GP -> CLS."/class.member.php");
+	$C_Member 	= new Member;
+	
+	$args = "";
+	$args['mb_code'] = $_SESSION['susercode'];
+	$data = $C_Member->Mem_Info($args);
+	
+	if($data) {
+		extract($data);
+		
+		$arr_post = explode("-", $mb_zip_code);
+		$mb_post1 = $arr_post[0];
+		$mb_post2 = $arr_post[1];
+		
+		$arr_mobile = explode("-", $mb_mobile);
+		$mb_mobile1 = $arr_mobile[0];
+		$mb_mobile2 = $arr_mobile[1];
+		$mb_mobile3 = $arr_mobile[2];				
+
+
+		$arr_email = explode("@", $mb_email);
+		$mb_email1 = $arr_email[0];
+		$mb_email2 = $arr_email[1];
+
+		$sel_mobile = $C_Func -> makeSelect('mb_mobile1', $GP -> MOBILE, $mb_mobile1, '  title="휴대폰 앞자리 선택" style="width:110px;" ', '::선택::');		
+		$sel_email = $C_Func->makeSelect('email_sel', $GP -> EMAIL , $mb_email2, "'",'직접선택');
+	}
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(8,2);
+});
+</script>
+</head>
+
+<body class="mypage">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<p class="location"><a href="#" class="home">홈</a> &gt; <span>마이페이지</span> &gt; <strong>비밀번호변경</strong></p>
+		<h1 class="pageTitle"><span>비밀번호변경</span></h1>
+		<? include_once $GP -> INC_WWW . '/snb.php'; ?>
+		<div class="contents">
+
+			<div class="typeWrite">
+				<form action="?" id="frmPass" name="frmPass" method="post" novalidate="novalidate">
+					<input type="hidden" name="mode" id="mode" value="MEM_PASS_CH" />
+					<input type="hidden" name="mb_code" id="mb_code" value="<?=$mb_code?>" />
+					<table>
+						<caption>비밀번호 변경</caption>
+						<colgroup>
+							<col />
+							<col />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									현재 비밀번호
+								</th>
+								<td>
+									<input type="password" class="txt" title="현재 비밀번호입력" style="width:160px;" placeholder="현재 비밀번호" id="mb_pwd" name="mb_pwd" />
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									새 비밀번호
+								</th>
+								<td>
+									<input type="password" class="txt" title="새 비밀번호 입력" style="width:160px;" placeholder="새 비밀번호" id="mb_pwd_ch" name="mb_pwd_ch" />
+									<p><span class="colorIdt">#</span> 6~16자의 영문과 숫자조합. 대소문자, 특수문자 사용가능</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									비밀번호 확인
+								</th>
+								<td>
+									<input type="password" class="txt" title="비밀번호 확인 입력" style="width:160px;" placeholder="비밀번호 확인" id="mb_pwd_ok" name="mb_pwd_ok" />
+									<p><span class="colorIdt">#</span> 비밀번호를 한번 더 입력하여 주십시오.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+
+			<div class="btnWrap btn2">
+				<span><a href="#;" class="btnL btnLConfirm" id="btn_pass_submit">수정</a></span>
+				<span><a href="#;" class="btnL btnLCancel" id="btn_pass_cancel">취소</a></span>
+			</div>
+		</div>
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+
+<script type='text/javascript' src='/js/jquery.alphanumeric.js'></script>
+<script type='text/javascript' src='/js/jquery.validate.js'></script>
+<script type='text/javascript' src='/js/mem/mem_page.js'></script>
+</body>
+</html>

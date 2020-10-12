@@ -1,0 +1,332 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(5,3);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?>
+			<div class="contents">
+				<h1 class="pageTitle"><p class="subTitle2">개방병동</p><span class="colorIdt">사랑병동</span></h1>
+
+				<div class="imgCont imgItem3 subSection2">
+					<span><img src="/images/contents/img_welfare03_04.jpg" alt=""></span>
+					<span><img src="/images/contents/img_welfare03_03.jpg" alt=""></span>
+					<span><img src="/images/contents/img_welfare03_05.jpg" alt=""></span>
+				</div>
+				<div class="contSection">
+					<h2 class="subTitle"><strong>개방병동</strong>이란?</h2>
+					<div class="section">
+						<p class="subTitle3">1. 정신과 증상 관리 및 재활이 필요한 사람들</p>
+						<ul class="bgList bulType">
+							<li>집중 치료기간이 지난 뒤 자율성이 강화된 병동에서 자기관리를 위한 연습이 이루어집니다.</li>
+							<li>병동 규칙과 자신의 일정 조율을 통해 생활 관리를 연습합니다.</li>
+						</ul>
+						<p class="subTitle3">2. 알코올로부터 회복을 원하는 사람들</p>
+						<ul class="bgList bulType">
+							<li>보호병동이 자신의 알코올중독을 인정하는 과정이라면 개방병동은 술 없이 온전한 생활을 유지하는 능력을 키워나가는 과정입니다.</li>
+							<li>단주 방법을 배우고 실천하는 생활연습이 이루어집니다.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tab subSection">
+					<p class="mobBtn"><button type="button">탭1</button></p>
+					<ul class="tabList">
+						<li class="on"><a href="#">알코올</a></li>
+						<li><a href="#">정신재활</a></li>
+					</ul>
+				</div>
+
+				<div class="tabCont">
+					<!--탭1 / 알코올-->
+					<div>
+						<div class="contSection">
+							<h2 class="subTitle">알코올 <strong>활동 시간표</strong></h2>
+							<div class="section">
+								<div class="typeList">
+									<table>
+										<caption>알코올 활동 시간표</caption>
+										<colgroup>
+											<col style="width:15%">
+											<col style="width:*">
+											<col style="width:*">
+											<col style="width:*">
+											<col style="width:*">
+											<col style="width:*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">시간</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+											</tr>
+										</thead>
+										<tbody class="alignCenter">
+											<tr>
+												<th scope="row">10:00~11:00</th>
+												<td>감각통합명상</td>
+												<td>사랑카페</td>
+												<td>감각통합명상</td>
+												<td>심신이완훈련</td>
+												<td>음악감상</td>
+											</tr>
+											<tr>
+												<th scope="row">11:00~12:00</th>
+												<td>병동회의</td>
+												<td colspan="4">위생관리 및 독서</td>
+											</tr>
+											<tr>
+												<th scope="row">12:00~14:00</th>
+												<td colspan="5">점심시간 및 자율산책</td>
+											</tr>
+											<tr>
+												<th scope="row">14:00~15:00</th>
+												<td></td>
+												<td>전문의교육</td>
+												<td>행복한동행</td>
+                                                <td>전문의교육</td>
+												<td>행복한동행</td>
+											</tr>
+											<tr>
+												<th scope="row">15:00~16:00</th>
+												<td></td>
+												<td></td>
+												<td>문학치료</td>
+                                                <td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+									<p class="iconTitle3 subSection2">프로그램 일정은 사정에 따라 변동될 수 있습니다.</p>
+								</div>
+								<ul class="liststyle1 subSection">
+                                	<li><p class="ti">행복한동행</p><p class="con">정신질환의 재발경고 징후, 약물복용방법 등에 대해 인식하고 스스로 증상관리를 하여 퇴원이후 지속적으로 치료를 유지할 수 있도록 돕는다. 더 나아가 지역사회 자원을 파악하여 사회복귀를 준비할 수 있다.</p></li>
+                                    <li><p class="ti">사랑카페</p><p class="con">자신의 주간 생활 계획을 세워 병동생활에 활력을 증진시킨다. 더 나아가 병동모임을 통해 병동생활에서 도움이 될 만한 주제와 아이디어를 공유할 수 있다.</p></li>
+									<li><p class="ti">감각통합명상/심신이완훈련</p><p class="con">명상을 통해 자신의 감각을 들여다보고 믐과 마음이 이완되는 경험을 갖는다.
+더 나아가 편안함을 느끼며 자신을 돌아보는 시간을 갖는다.</p></li>
+									<li><p class="ti">전문의교육</p><p class="con">정신과적 증상 및 일반적인 정신건강에 관한 교육을 통해 증상에 대한 이해를 돕고 스스로를 치료의 주체로 생각할 수 있는 적극성을 확립시킨다.</p></li>
+
+									<li><p class="ti">병동회의</p><p class="con">환자들이 자신의 문제를 집단에서 토의함으로써 문제해결을 위한 사회기능을 향상시키고자 한다. 더 나아가 집단의 장을 형성하여 퇴원계획수립을 촉진하고 환자들이 자신의 재활치료에 집중할 수 있도록 지지한다.</p></li>
+									<li><p class="ti">음악감상</p><p class="con">음악감상을 진행하여 정서적 환기를 경험하고 음악이라는 매개체를 통해서 부정적인 심리 증상들을 감소시킨다.</p></li>
+
+								</ul>
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle">알코올중독 <strong>회복의 길</strong></h2>
+							<div class="section">
+								<ul class="bgList bulType">
+									<li>해독과 신체 회복은 중요합니다. 그러나 몸이 좋아져 술을 접하면 다시 제자리로 돌아오게 됩니다. </li>
+									<li>술이 장애물이었음을 깨닫고 자신을 바꾸겠다는 목표를 가질 때 변화가 찾아옵니다.</li>
+									<li>혼자서는 무력하지만 함께하면 강해질 수 있습니다.</li>
+									<li>지역재활기관의 지원을 받으며 다음 단계의 회복을 시도합니다.</li>
+								</ul>
+							</div>
+						</div>
+						<!--<div class="contSection">
+							<h2 class="subTitle">중독 회복 <strong>오픈 커뮤니티</strong></h2>
+							<div class="section">
+								<p class="iconTitle4"><strong>열린 커뮤니티를 지향합니다. 중독 회복 모임, 가족 모임, 치료자 모임 등을 마련하여 함께 공부하며 경험과 지혜를 나눕니다.</strong></p>
+								<p class="subTitle3">중독 재활 오픈 커뮤니티의 의미</p>
+								<ul class="bgList bulType">
+									<li>혼자서는 무력하지만 함께 하면 강해질 수 있습니다.</li>
+									<li>자조모임은 퇴원 후 지속적인 중독 재활과 회복 활동의 동력이 됩니다.</li>
+									<li>지역 재활기관의 지원을 받으며 다음 단계의 회복을 시도합니다.</li>
+									<li>재활하는 중독자에게 진정한 의미가 되는 가족의 회복을 지원합니다.</li>
+									<li>재활센터, 상담 현장의 선생님들과 교류를 통해 함께 발전하고자 합니다.</li>
+								</ul>
+							</div>
+						</div>-->
+
+						<div class="contSection">
+							<h2 class="subTitle">회복 <strong>네트워크</strong></h2>
+							<div class="section">
+								<div>
+									<img class="mobHide" src="/images/contents/img_welfare03_08.gif" alt="" />
+									<img class="mobShow" src="/images/contents/img_welfare03_09.gif" alt="" />
+								</div>
+								<div class="roundBox subSection2">
+									<ul class="liststyle1">
+										<li><p class="ti">개방병동 프로그램</p><p class="con">주치의, 전문강사 및 정신건강사회복지사가 진행</p></li>
+										<li><p class="ti">연계기관 방문교육</p><p class="con">지역사회 재활시설, 중독관리통합지원센터 등 연계기관 교육 및 소개</p></li>
+										<li><p class="ti">AA회복모임</p><p class="con">단주모임. 매주 화, 목 지하1층 오후 7:30</p></li>
+										<li><p class="ti">재활기관 연계</p><p class="con">재활시설, 상담센터 및 복지지관 연계</p></li>
+										<li><p class="ti">통합사례회의</p><p class="con">유관기관 연계망 구축 및 연계회의</p></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!--<div class="contSection">
+							<h2 class="subTitle"><strong>가족</strong> 교육</h2>
+							<div class="section">
+								<p class="subTitle3">모든 가족들은 '술 없이' 행복할 권리가 있습니다.</p>
+								<ul class="bgList bulType">
+									<li>'알코올중독'이란 질병의 전반적인 정보 제공</li>
+									<li>알코올중독과 연관된 가족 문제에 대한 상담</li>
+									<li>재발예방과 가족들의 대처 방법</li>
+								</ul>
+								<div class="roundBox subSection2">
+									<ul class="liststyle1">
+										<li><p class="ti">시간</p><p class="con">매월 마지막 주 월요일 저녁 7시 (사정에 따라 변경 될 수 있습니다.)</p></li>
+										<li><p class="ti">장소</p><p class="con">루카스병원 지하 1층 세미나실</p></li>
+										<li><p class="ti">문의</p><p class="con">사회사업실 : 032)310-0176</p></li>
+									</ul>
+								</div>
+							</div>
+						</div>-->
+
+						<!--<div class="contSection">
+							<h2 class="subTitle">알코올 클리닉</h2>
+							<div class="section">
+								<p class="subTitle3">루카스 알코올 클리닉 홈페이지</p>
+								<p class="colorBlack">루카스 알코올 회복팀의 근황을 확인하고 회복 공부에 필요한 정보를 얻으실 수 있습니다</p>
+								<div class="roundBox subSection2">
+									<p class="iconTitle1">홈페이지 바로가기 : <a href="http://blog.naver.com/lucas_hosp" target="_blank">http://blog.naver.com/lucas_hosp</a></p>
+								</div>
+							</div>
+						</div>-->
+					</div>
+					<!--탭2 / 정신재활-->
+					<div>
+						<div class="contSection">
+							<h2 class="subTitle">정신재활<strong> 활동 시간표</strong></h2>
+							<div class="section">
+								<div class="typeList">
+									<table>
+										<caption>사랑병동 프로그램 시간표</caption>
+										<colgroup>
+											<col style="width:15%">
+											<col style="width:*">
+											<col style="width:*">
+											<col style="width:*">
+											<col style="width:*">
+											<col style="width:*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">시간</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+											</tr>
+										</thead>
+										<tbody class="alignCenter">
+											<tr>
+												<th scope="row">10:00~11:00</th>
+												<td>동아리조회</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">11:00~12:00</th>
+												<td>병동회의</td>
+												<td colspan="3">동아리활동</td>
+												<td>음악감상</td>
+											</tr>
+											<tr>
+												<th scope="row">12:00~14:00</th>
+												<td colspan="5">점심시간 및 자율산책</td>
+											</tr>
+											<tr>
+												<th scope="row">14:00~15:00</th>
+												<td>심리극</td>
+												<td>전문의교육</td>
+												<td>행복한동행</td>
+												<td>전문의교육</td>
+												<td>행복한동행</td>
+											</tr>
+											<tr>
+												<th scope="row">15:00~16:00</th>
+												<td></td>
+												<td>심리극</td>
+												<td>문학치료</td>
+												<td>인지행동치료</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+									<p class="iconTitle3 subSection2">프로그램 일정은 사정에 따라 변동될 수 있습니다.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle"><strong>프로그램</strong> 소개</h2>
+							<div class="section">
+                                <ul class="liststyle1 subSection">
+									<li><p class="ti">동아리활동</p><p class="con">치료진의 개입을 최소화하여 환자들이 직접 동아리를 형성하고 스스로 하고 싶은 활동을 결정하여 진행한다. 동아리 활동을 통해 병동생활의 활기를 불러일으키고 자발성과 협동심을 기를 수 있도록 지지한다.</p></li>
+									<li><p class="ti">병동회의</p><p class="con">환자들이 자신의 문제를 집단에서 토의함으로써 문제해결을 위한 사회기능을 향상시키고자 한다. 더 나아가 집단의 장을 형성하여 퇴원계획수립을 촉진하고 환자들이 자신의 재활치료에 집중할 수 있도록 지지한다.</p></li>
+									<li><p class="ti">감각통합명상</p><p class="con">명상을 통해 자신의 감각을 들여다보고 믐과 마음이 이완되는 경험을 갖는다.더 나아가 편안함을 느끼며 자신을 돌아보는 시간을 갖는다.</p></li>
+									<li><p class="ti">전문의교육</p><p class="con">정신과적 증상 및 일반적인 정신건강에 관한 교육을 통해 증상에 대한 이해를 돕고 스스로를 치료의 주체로 생각할 수 있는 적극성을 확립시킨다.</p></li>
+									<li><p class="ti">No! Stress</p><p class="con">만병의 근원인 스트레스의 관리 및 예방법을 배움으로써 증상의 악화와 재발을 방지하고 건강한 삶을 영위할 수 있는 방법과 목표를 수립할 수 있도록 돕는다.</p></li>
+									<li><p class="ti">PEPS</p><p class="con">정신건강 및 신체건강에 대한 교육을 통해 질병의 이해를 돕고 스스로를 관리할 수 있도록 지지한다.</p></li>
+									<li><p class="ti">음악감상</p><p class="con">음악감상을 진행하여 정서적 환기를 경험하고 음악이라는 매개체를 통해서 부정적인 심리 증상들을 감소시킨다.</p></li>
+									<li><p class="ti">심리극</p><p class="con">자신의 감정을 자발적으로 드러내면서 대인관계의 문제를 통찰하며 사회적 역할에 대한 이해를 돕는다.</p></li>
+                                    <li><p class="ti">행복한동행</p><p class="con">정신질환의 재발경고 징후, 약물복용방법 등에 대해 인식하고 스스로 증상관리를 하여 퇴원이후 지속적으로 치료를 유지할 수 있도록 돕는다. 더 나아가 지역사회 자원을 파악하여 사회복귀를 준비할 수
+있다.</p></li>
+									<li><p class="ti">인지행동치료</p><p class="con">부정적사고와 왜곡된 인지를 파악하여 합리적 사고로 교정하는 과정을 거쳐 문제 상황에 대한 올바른 판단력을 기른다.</p></li>
+
+								</ul>
+
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle">정신 재활을 통한 <br /><strong>지역사회 재진입</strong></h2>
+							<div class="section">
+								<ul class="bgList bulType">
+									<li>병동 정신재활 프로그램을 통하여 일상생활 관리 및 사회기술 능력 향상을 통해 사회 구성원으로서 역할을 수행할 수 있도록 합니다.</li>
+									<li>사회복귀를 위한 낮병원 참여에의 다리를 놓아주는 곳 입니다.</li>
+									<li>스스로 증상을 관리하고 스트레스에 대처할 수 있도록 약물치료와 주치의 상담 및 사회기술 훈련 등의 여러가지 정신사회 재활치료가 병행되는 곳입니다.</li>
+									<li>재활 센터, 상담 현장의 선생님들과 교류를 통해 퇴원 이후 지속적인 사례관리가 이어집니다.</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle">정신 재활 <strong>네트워크</strong></h2>
+							<div class="section">
+								<div>
+									<img class="mobHide" src="/images/contents/img_welfare03_06.gif" alt="" />
+									<img class="mobShow" src="/images/contents/img_welfare03_07.gif" alt="" />
+								</div>
+								<div class="roundBox subSection2">
+									<ul class="liststyle1">
+										<li><p class="ti">통합 사례회의</p><p class="con">다양한 자원과 연계하여 보다 나은 삶의 질을 위한 여러 기관들의 다각적 개입</p></li>
+										<li><p class="ti">병동 정신재활<br /> 프로그램</p><p class="con">집단 활동을 통해 사회복귀를 위한 일상생활 향상과 대인관계, 사회기술 증진 도모</p></li>
+										<li><p class="ti">병동 밖으로 </p><p class="con">일상 생활 복귀 및 직업 재활을 위한 활동</p></li>
+										<li><p class="ti">재활기관연계</p><p class="con">대상자가 필요한 다양한 지역사회 자원 파악, 자원 및 기관 연계</p></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

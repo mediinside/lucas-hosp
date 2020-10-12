@@ -1,0 +1,124 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+  
+  $sel_email = $C_Func->makeSelect('email_sel', $GP -> EMAIL , $email_sel, " title='도메인 선택' style='width:100px;'  ",'직접선택');
+  $sel_mobile = $C_Func->makeSelect('mb_mobile1', $GP -> MOBILE , $mb_mobile1, " title='휴대폰 앞자리 선택' style='width:100px;' ",':::선택:::'); 
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(7,1);
+});
+</script>
+<script type="text/javascript" src="/js/jquery.validate.js"></script>
+<script type="text/javascript" src="/js/jquery.alphanumeric.js"></script>
+<script type="text/javascript" src="/js/mem/mem_join.js"></script>
+</head>
+
+<body class="member">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<p class="location"><a href="#" class="home">홈</a> &gt; <span>회원</span> &gt; <strong>회원가입</strong></p>
+		<h1 class="pageTitle"><span>회원가입</span></h1>
+		<? include_once $GP -> INC_WWW . '/snb.php'; ?>
+		<div class="contents">
+	
+			<form action="?" id="frmJoin" name="frmJoin" method="post">
+				<input type="hidden" value="MEM_REG" id="mode" name="mode">
+				<div class="typeWrite">
+					<table>
+						<caption>회원가입 정보입력</caption>
+						<colgroup>
+							<col />
+							<col />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									아이디
+								</th>
+								<td>
+									<input type="text" class="txt" title="아이디 입력" placeholder="아이디" style="width:160px;" id="mb_id" name="mb_id" /> 
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									이메일
+								</th>
+								<td>
+									<span class="tableCell">
+										<span class="cell">
+											<input type="text" class="txt" title="이메일 입력" placeholder="이메일" style="width:90px;" id="mb_email1" name="mb_email1" /> 
+										</span>
+										<span class="cell">@</span>
+										<span class="cell">
+											<input type="text" class="txt" title="이메일 입력" placeholder="도메인" style="width:90px;" id="mb_email2" name="mb_email2" /> 
+										</span>
+										<span class="cell">
+											<?=$sel_email?>
+										</span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									성명
+								</th>
+								<td>
+									<input type="text" class="txt" title="성명 입력" placeholder="성명" style="width:160px;" id="mb_name" name="mb_name" />
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									핸드폰번호
+								</th>
+								<td>
+									<span class="tableCell">
+										<span class="cell" style="width:32%">
+											<?= $sel_mobile ?>
+										</span>
+										<span class="cell">-</span>
+										<span class="cell"><input type="text" class="txt" title="휴대폰 가운데자리 입력" style="width:100px;" id="mb_mobile2" name="mb_mobile2" /></span>
+										<span class="cell">-</span>
+										<span class="cell"><input type="text" class="txt" title="휴대폰 마지막자리 입력" style="width:100px;" id="mb_mobile3" name="mb_mobile3" /></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									비밀번호
+								</th>
+								<td>
+									<input type="password" class="txt" title="비밀번호 입력" placeholder="비밀번호" style="width:160px;" id="mb_pwd" name="mb_pwd" />
+									<p><span class="colorIdt">#</span> 6~16자의 영문과 숫자조합. 대소문자, 특수문자 사용가능</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									비밀번호 확인
+								</th>
+								<td>
+									<input type="password" class="txt" title="비밀번호 확인 입력" placeholder="비밀번호 확인" style="width:160px;" id="mb_pwd_ok" name="mb_pwd_ok" />
+									<p><span class="colorIdt">#</span> 비밀번호를 한번 더 입력하여 주십시오.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btnWrap btn2">
+					<span><button type="submit" class="btnL btnLConfirm">확인</button></span>
+					<span><a href="/" class="btnL btnLCancel" title="메인화면으로 돌아갑니다.">취소</a></span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

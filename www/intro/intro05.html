@@ -1,0 +1,133 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+
+	include_once($GP->CLS."class.list.php");
+	include_once($GP->CLS."class.nonpay.php");	
+	$C_ListClass 	= new ListClass;
+	$C_Nonpay 	= new Nonpay;
+	
+	$args = array();
+	$args['show_row'] = 15;
+	$data = "";
+	$data = $C_Nonpay->NonPay_List(array_merge($_GET,$_POST,$args));
+	
+	$data_list 		= $data['data'];
+	$page_link 		= $data['page_info']['link'];
+	$page_search 	= $data['page_info']['search'];
+	$totalcount 	= $data['page_info']['total'];
+	
+	$totalpages 	= $data['page_info']['totalpages'];
+	$nowPage 		= $data['page_info']['page'];
+	$totalcount_l 	= number_format($totalcount,0);	
+	$data_list_cnt 	= count($data_list);
+	
+	$cate1_select = $C_Func -> makeSelect_Normal('cate1', $GP -> CATE_TYPE1, $cate1, '', '::선택::');
+
+	$last_date = $C_Nonpay->Last_Update_date($args);
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(1,5);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?> 
+			<div class="contents">
+				<h1 class="pageTitle"><span class="colorIdt">비급여</span> 안내</h1>
+
+				<!-- bbs -->
+				<fieldset class="bbsSearch">
+					<legend>게시물 검색</legend>
+					<form id="frm_search" name="frm_search" method="get" action="?">
+					<input type="hidden" name="cate1" id="cate1" value="<?=$_GET['cate1']?>" />
+					<input type="text" class="txt" title="검색어 입력" name="np_item" id="np_item" value="<?=$_GET['np_item']?>" />
+					<a href="#;" class="btnM btnSearch" id="search_submit">검색</a>
+				</fieldset>
+				<p class="subSection2 alignRight">최종수정일. <strong class="colorIdt"><?=$last_date['np_editdate']?></strong></p>
+				<div class="typeList typeList2 subSection2">
+					<table style="min-width:100%;">
+						<caption>비급여</caption>
+						<colgroup>
+							<col class="mobHide" style="width:10%;">
+							<col style="width:18%">
+							<col style="width:18%">
+							<col style="width:14%">
+							<col style="width:14%">
+							<col style="width:14%">
+							<col style="width:10%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="mobHide" scope="col">NO</th>
+								<th scope="col">분류</th>
+								<th scope="col">항목</th>
+								<th scope="col">단위</th>
+								<th scope="col">최저가격(원)</th>
+								<th scope="col">최고가격(원)</th>
+								<th scope="col">코드</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?
+								$dummy = 1;
+								for ($i = 0 ; $i < $data_list_cnt ; $i++) {
+									$np_idx 			= $data_list[$i]['np_idx'];
+									$np_item 			= $data_list[$i]['np_item'];							
+									$cate1 				= $data_list[$i]['cate1'];							
+									$np_gubun 		= $data_list[$i]['np_gubun'];										
+									$np_price 		= $data_list[$i]['np_price'];							
+									$np_row_price 		= $data_list[$i]['np_row_price'];							
+									$np_high_price 		= $data_list[$i]['np_high_price'];							
+									$np_regdate 	= $data_list[$i]['np_regdate'];
+									$np_gita		 	= $data_list[$i]['np_gita'];
+									$np_code		 	= $data_list[$i]['np_code'];
+									$np_row_price		= str_replace(",","",$np_row_price);
+									$np_row_price		= number_format($np_row_price);
+
+									$np_high_price		= str_replace(",","",$np_high_price);
+									$np_high_price		= number_format($np_high_price);
+							?>
+							<tr>
+								<td class="mobHide alignCenter"><?=$data['page_info']['start_num']--?></td>
+								<td class="alignCenter"><?=$GP -> CATE_TYPE1[$cate1]?></td>
+								<td><?=$np_item?></td>
+								<td class="alignCenter"><?=$np_gubun?></td>
+								<td class="alignCenter"><?=$np_row_price?></td>
+								<td class="alignCenter"><?=$np_high_price?></td>
+								<td class="alignCenter"><?=$np_code?></td>
+							</tr>
+							<? } ?>
+						</tbody>
+					</table>
+				</div>
+
+
+				<div class="pagination">
+					<?=$page_link?>
+				</div>
+				<!-- bbs -->
+
+				
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('#search_submit').click(function(){
+			$('#frm_search').submit();
+			return false;
+		});
+	});
+</script>
+</body>
+</html>

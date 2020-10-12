@@ -1,0 +1,136 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+	include_once $GP -> INC_WWW . '/count_inc.php'; 	
+	//include_once $GP -> INC_WWW . '/inc.login_check.php';    
+	
+	include_once($GP -> CLS."/class.member.php");
+	$C_Member 	= new Member;
+	
+	$args = "";
+	$args['mb_code'] = $_SESSION['susercode'];
+	$data = $C_Member->Mem_Info($args);
+	
+	if($data) {
+		extract($data);
+		
+		$arr_post = explode("-", $mb_zip_code);
+		$mb_post1 = $arr_post[0];
+		$mb_post2 = $arr_post[1];
+		
+		$arr_mobile = explode("-", $mb_mobile);
+		$mb_mobile1 = $arr_mobile[0];
+		$mb_mobile2 = $arr_mobile[1];
+		$mb_mobile3 = $arr_mobile[2];				
+
+
+		$arr_email = explode("@", $mb_email);
+		$mb_email1 = $arr_email[0];
+		$mb_email2 = $arr_email[1];
+
+		$sel_mobile = $C_Func -> makeSelect('mb_mobile1', $GP -> MOBILE, $mb_mobile1, '  title="휴대폰 앞자리 선택" style="width:110px;" ', '::선택::');		
+		$sel_email = $C_Func->makeSelect('email_sel', $GP -> EMAIL , $mb_email2, "'",'직접선택');
+	}
+?>
+</head>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(8,1);
+});
+</script>
+
+
+<body class="mypage">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<p class="location"><a href="#" class="home">홈</a> &gt; <span>마이페이지</span> &gt; <strong>회원정보수정</strong></p>
+		<h1 class="pageTitle"><span>마이페이지</span></h1>
+		<? include_once $GP -> INC_WWW . '/snb.php'; ?>
+		<div class="contents">
+			<div class="typeWrite">
+				<form action="?" id="frmJoin" name="frmJoin" method="post" novalidate="novalidate">
+					<input type="hidden" value="MEM_MODIFY" id="mode" name="mode">
+					<input type="hidden" name="old_email" id="old_id" value="<?=$mb_id?>" />
+					<input type="hidden" name="old_email" id="old_email" value="<?=$mb_email?>" />
+					<input type="hidden" name="mb_code" id="mb_code" value="<?=$mb_code?>" />
+					<table>
+						<caption>회원정보 수정</caption>
+						<colgroup>
+							<col />
+							<col />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									이메일
+								</th>
+								<td>
+									<span class="tableCell">
+										<span class="cell">
+											<input type="text" class="txt" title="이메일 입력" placeholder="아이디" style="width:90px;" id="mb_email1" name="mb_email1" value="<?=$mb_email1?>" /> 
+										</span>
+										<span class="cell">@</span>
+										<span class="cell">
+											<input type="text" class="txt" title="이메일 입력" placeholder="도메인" style="width:90px;" id="mb_email2" name="mb_email2" value="<?=$mb_email2?>" /> 
+										</span>
+										<span class="cell">
+											<?=$sel_email?>
+										</span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									성명
+								</th>
+								<td>
+									<input type="text" class="txt" title="성명 입력" style="width:160px;" placeholder="성명" value="<?=$mb_name?>" id="mb_name" name="mb_name" />
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									핸드폰번호
+								</th>
+								<td>
+									<span class="tableCell">
+										<span class="cell">
+											<?=$sel_mobile?>
+										</span>
+										<span class="cell">-</span>
+										<span class="cell"><input type="text" class="txt" title="휴대폰 가운데자리 입력" style="width:100px;" value="<?=$mb_mobile2?>" id="mb_mobile2" name="mb_mobile2" /></span>
+										<span class="cell">-</span>
+										<span class="cell"><input type="text" class="txt" title="휴대폰 마지막자리 입력" style="width:100px;" value="<?=$mb_mobile3?>" id="mb_mobile3" name="mb_mobile3" /></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<span class="colorIdt">*</span>
+									현재 비밀번호
+								</th>
+								<td>
+									<input type="password" class="txt" title="비밀번호 입력" style="width:160px;" placeholder="비밀번호" id="mb_pwd" name="mb_pwd" />
+									<p><span class="colorIdt">#</span> 6~16자의 영문과 숫자조합. 대소문자, 특수문자 사용가능</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+
+			<div class="btnWrap btn2">
+				<span><a href="#;" class="btnL btnLConfirm" id="btn_submit">수정</a></span>
+				<span><a href="#;" class="btnL btnLCancel" id="btn_cancel">취소</a></span>
+			</div>
+		</div>
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+
+<script type='text/javascript' src='/js/jquery.alphanumeric.js'></script>
+<script type='text/javascript' src='/js/jquery.validate.js'></script>
+<script type='text/javascript' src='/js/mem/mem_page.js'></script>
+</body>
+</html>

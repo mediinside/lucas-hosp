@@ -1,0 +1,490 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(1,2);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?>
+			<div class="contents">
+				<h1 class="pageTitle">루카스 <span class="colorIdt">치료진</span></h1>
+				<p class="subTitle2">병원을 찾으신 분들의 회복을 지원하는 루카스 가족을 소개합니다.</p>
+				<p class="colorBlack subSection2">
+					효과적이고 전문적인 도움을 드리기 위해 정신건강의학과 전문의, 정신건강간호사, 정신건강사회복지사, <br />
+					전문 상담사, 임상심리사 및 외부 치료자원이 협조하여 팀으로 활동하고 있습니다.
+				</p>
+
+				<div class="tab subSection">
+					<p class="mobBtn"><button type="button">전체치료진</button></p>
+					<ul class="tabList">
+						<li <?if($_GET['dr_type'] == ''){ echo "class='on'"; } ?>><a href="intro02_all.html">전체치료진</a></li>
+						<?
+							foreach($GP -> DOCTOR_TYPE  as $key => $val) {
+						?>
+						<li <?if($_GET['dr_type'] == $key){ echo "class='on'"; } ?>><a href="intro02.html?dr_type=<?=$key?>"><?=$val?></a></li>
+						<? } ?>
+					</ul>
+				</div>
+				<div class="subSection">
+					<h2 class="subTitle">전체 치료진</h2>
+					<div class="docSection2">
+						<div class="item2">
+							<div class="docItem">
+								<p class="docSubject">정신건강의학과</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_01_01.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">전문의</p>
+									<p class="name">원장 <strong>김승겸</strong></p>
+								</div>
+							</div>
+
+							<div class="docItem">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_01_05.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">전문의</p>
+									<p class="name">과장 <strong>윤정현</strong></p>
+								</div>
+							</div>
+						</div>
+
+						<div class="item2">
+							<div class="docItem">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_01_04.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">전문의</p>
+									<p class="name">과장 <strong>하수희</strong></p>
+								</div>
+							</div>
+                            <div class="docItem">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_01_12.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">전문의</p>
+									<p class="name">과장 <strong>구자현</strong></p>
+								</div>
+							</div>
+							<!-- <div class="docItem">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro04_02_11.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">전문의</p>
+									<p class="name">과장 <strong>김시영</strong></p>
+								</div>
+							</div> -->
+							<div class="docItem">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_01_13.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">전문의</p>
+									<p class="name">과장 <strong>김다슬</strong></p>
+								</div>
+							</div>
+							<!--<div class="docItem">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_01_08.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">전문의</p>
+									<p class="name">과장 <strong>김지현</strong></p>
+								</div>
+                                -->
+							<!-- <div class="docItem">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_01_07.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">전문의</p>
+									<p class="name">과장 <strong>유승택</strong></p>
+								</div>
+							</div> -->
+
+						</div>
+						<div class="item2">
+							<div class="itemOddTab">
+
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem">
+								<p class="docSubject">한방과</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_02_01.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">한의사</p>
+									<p class="name">과장 <strong>홍주영</strong></p>
+								</div>
+							</div>
+						</div>
+
+						<div class="item2">
+							<div class="docItem color7">
+								<p class="docSubject">QI부</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_04_01.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">QI부장</p>
+									<p class="name"><strong>김선희</strong></p>
+								</div>
+							</div>
+							<!-- <div class="docItem color7">
+								<p class="docSubject"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_11_02.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">보안팀장</p>
+									<p class="name"><strong>김명기</strong></p>
+								</div>
+							</div> -->
+							<div class="docItem color7">
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem color2">
+								<p class="docSubject">간호부</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_04_02.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">행복병동수간호사</p>
+									<p class="name"><strong>김지현</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem group color2">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_04_03.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>행복병동</strong> 간호팀</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="item2">
+							<div class="docItem color2">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_04_04.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">희망병동수간호사 </p>
+									<p class="name"><strong>남인천</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem color2 group">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_04_05.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>희망병동</strong> 간호팀</p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem color2">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_04_06.jpg" alt="" />
+								</span>
+								<div class="info color1">
+									<p class="position">사랑병동수간호사</p>
+									<p class="name"><strong>고미령</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem color2 group">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_04_07.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>사랑병동</strong> 간호팀</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="item2">
+							<div class="docItem color3">
+								<p class="docSubject">초빙강사</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_05_01.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">12단계 치료공동체 원장 </p>
+									<p class="name"><strong>신양호</strong> 교수님</p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem color4">
+								<p class="docSubject">사회사업부</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_06_01.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">부장</p>
+									<p class="name"><strong>조미옥</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem group color4">
+								<p class="docSubject tabHide"></p>
+								<span class="image">
+									<img src="http://www.lucas-hosp.co.kr/common/doctor/15541676545173.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>사회사업부</strong> </p>
+								</div>
+							</div>
+						</div>
+
+						<div class="item2">
+							<div class="docItem group color4">
+								<p class="docSubject tabHide"></p>
+								<span class="image">
+									<img src="http://www.lucas-hosp.co.kr/common/doctor/16018748223448.png" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>병원형</strong> Wee센터</p>
+								</div>
+							</div>
+						</div>
+						<!-- 	<div class="item2">
+							<div class="docItem group color4">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_06_04.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>중독재활</strong> 팀</p>
+								</div>
+							</div>
+						</div> -->
+						<div class="item2">
+							<div class="docItem color5">
+								<p class="docSubject">임상부서</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_07_02.jpg" alt="" />
+								</span>
+
+								<div class="info">
+									<p class="position">임상심리과</p>
+									<p class="name">임상심리사 <strong>서민지</strong></p>
+								</div>
+
+							</div>
+							<div class="docItem color5">
+								<p class="docSubject"></p>
+<span class="image">
+									<img src="/images/contents/img_intro02_07_03.jpg" alt="" />
+								</span>
+                                <div class="info">
+									<p class="position">진단검사의학과</p>
+									<p class="name">임상병리사 <strong>박민정</strong></p>
+								</div>
+
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem color5">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_07_04.jpg" alt="" />
+								</span>
+                                <div class="info">
+									<p class="position">영상의학과</p>
+									<p class="name">방사선사 <strong>박은선</strong></p>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="item2">
+							<div class="docItem group color5">
+								<p class="docSubject tabHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_07_05.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>약제과</strong></p>
+								</div>
+							</div>
+							<div class="item2">
+								<div class="itemOddTab">
+
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem color6">
+								<p class="docSubject">영양과</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_08_01.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">영양과</p>
+									<p class="name">영양사 <strong>김주희</strong></p>
+								</div>
+							</div>
+							<div class="docItem color6">
+								<p class="docSubject"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_08_02.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">영양과</p>
+									<p class="name">영양사 <strong>박시윤</strong></p>
+								</div>
+							</div>
+							<div class="docItem color6">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_08_04.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">영양과</p>
+									<p class="name">영양사 <strong>노다혜</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem group color6">
+								<p class="docSubject tabHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_08_03.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>영양</strong> 팀</p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="itemOddTab">
+
+							</div>
+						</div>
+
+						<!-- <div class="itemOddTab">
+							<div class="docItem color7">
+								<p class="docSubject">원무부</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_09_01.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">원무부장</p>
+									<p class="name"><strong>임주헌</strong></p>
+								</div>
+							</div>
+						</div> -->
+						<div class="item2">
+							<div class="docItem color7">
+								<p class="docSubject">원무부</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_09_01.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">원무부장</p>
+									<p class="name"><strong>임주헌</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem group color7">
+								<p class="docSubject mobHide"></p>
+								<span class="image">
+									<img src="http://www.lucas-hosp.co.kr/common/doctor/15579002471888.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>원무부</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem group color7">
+								<p class="docSubject tabHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_09_03.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>심사과</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="item2">
+							<div class="itemOddTab">
+
+							</div>
+						</div>
+						<div class="item2">
+							<div class="docItem color8">
+								<p class="docSubject">총무부</p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_10_01.jpg" alt="" />
+								</span>
+								<div class="info">
+									<p class="position">총무부장</p>
+									<p class="name"><strong>박주영</strong></p>
+								</div>
+							</div>
+						</div>
+
+						<div class="item2">
+							<div class="docItem group color8">
+							<p class="docSubject tabHide"></p>
+							<p class="docSubject tabShow mobHide"></p>
+								<span class="image">
+									<img src="/images/contents/img_intro02_10_02_.png" alt="" />
+								</span>
+								<div class="info">
+									<p class="name"><strong>총무부</strong></p>
+								</div>
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

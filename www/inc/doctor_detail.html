@@ -1,0 +1,49 @@
+<?
+	include_once  '../_init.php';
+	include_once $GP -> CLS . 'class.doctor.php';
+	$C_Doctor = new Doctor();
+
+	$args['dt_code'] = $_POST['dt_code'];
+	$rst = $C_Doctor->Doctor_Info_Code($args);
+  
+  if($rst) {
+		extract($rst);
+		$dr_treat  = $C_Func->dec_contents_edit($dr_treat);		
+		$dr_history  = $C_Func->dec_contents_edit($dr_history);		
+			
+		
+		$dr_img = '';
+		if($dr_list_img !=  '') {
+			$dr_img = "<img src='" . $GP -> UP_DOCTOR_URL . $dr_list_img . "' alt='" .  $dr_name ."' />";
+		}
+	}
+?>
+<span class="img"><?=$dr_img?></span>
+<div class="selDocTable">
+  <table>
+    <caption>의료진 정보 - 이름, 진료과, 전문분야</caption>
+    <colgroup>
+      <col style="width:35%" />
+      <col style="width:" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col" colspan="2">
+          <span class="name"><?=$dr_name?></span>
+          <span class="ico iconChoice">선택진료</span> <? if($dr_choide == "Y") { echo "선택진료의사"; }else { echo "진료의사"; }?>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">진료과</th>
+        <td><?=$GP -> CLINIC_TYPE[$dr_clinic]?></td>
+      </tr>
+      <tr>
+        <th scope="row">전문분야</th>
+        <td><?=$dr_treat?></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="link"><a href="/intro/intro03_view.html?dr_idx=<?=$dr_idx?>#dt_info" target="_blank" title="새창 띄움">의료진정보 더보기</a></p>
+</div>

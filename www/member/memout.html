@@ -1,0 +1,95 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+	include_once $GP -> INC_WWW . '/count_inc.php'; 	
+	//include_once $GP -> INC_WWW . '/inc.login_check.php';    
+	
+	include_once($GP -> CLS."/class.member.php");
+	$C_Member 	= new Member;
+	
+	$args = "";
+	$args['mb_code'] = $_SESSION['susercode'];
+	$data = $C_Member->Mem_Info($args);
+	
+	if($data) {
+		extract($data);
+		
+		$arr_post = explode("-", $mb_zip_code);
+		$mb_post1 = $arr_post[0];
+		$mb_post2 = $arr_post[1];
+		
+		$arr_mobile = explode("-", $mb_mobile);
+		$mb_mobile1 = $arr_mobile[0];
+		$mb_mobile2 = $arr_mobile[1];
+		$mb_mobile3 = $arr_mobile[2];				
+
+
+		$arr_email = explode("@", $mb_email);
+		$mb_email1 = $arr_email[0];
+		$mb_email2 = $arr_email[1];
+
+		$sel_mobile = $C_Func -> makeSelect('mb_mobile1', $GP -> MOBILE, $mb_mobile1, '  title="휴대폰 앞자리 선택" style="width:110px;" ', '::선택::');		
+		$sel_email = $C_Func->makeSelect('email_sel', $GP -> EMAIL , $mb_email2, "'",'직접선택');
+	}
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(8,3);
+});
+</script>
+</head>
+
+<body class="mypage">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<p class="location"><a href="#" class="home">홈</a> &gt; <span>마이페이지</span> &gt; <strong>회원탈퇴</strong></p>
+		<h1 class="pageTitle"><span>회원탈퇴</span></h1>
+		<? include_once $GP -> INC_WWW . '/snb.php'; ?>
+		<div class="contents">
+			<form action="?" id="frmWith" name="frmWith" method="post">
+				<input type="hidden" name="mode" id="mode" value="MEM_WITH" />
+				<input type="hidden" name="mb_code" id="mb_code" value="<?=$mb_code?>" />
+				<p class="outTxt">그동안 바로정형외과의 온라인 서비스를 이용해 주셔서 감사합니다.<br />
+				탈퇴 후에는 <span class="colorIdt"><?=$mb_id?></span>(으)로 다시 가입할 수 없으며, 아이디와 데이터는 복구할 수 없습니다.<br />
+				게시판 등의 서비스에 남아 있는 게시글은 탈퇴 후 삭제할 수 없습니다.</p>
+
+				<h2 class="subTitle">탈퇴 아이디 확인</h2>
+				<p class="idChk subSection">
+					<span class="id">
+						<strong class="txtGreen">아이디</strong> : <?=$mb_id?>
+					</span>
+					<span class="line">|</span>
+					<span class="name">
+						<strong class="txtGreen">이름</strong> : <?=$mb_name?>
+					</span>
+				</p>
+
+				<h2 class="subTitle">탈퇴 이유</h2>
+				<ul class="reasonList subSection">
+					<li><label><input type="radio" class="chk" value="1" name="reason" /> 사생활 기록 삭제 목적</label></li>
+					<li><label><input type="radio" class="chk" value="5" name="reason" /> 새 아이디 생성 목적</label></li>
+					<li><label><input type="radio" class="chk" value="2" name="reason" /> 이벤트 등의 목적으로 한시 사용함</label></li>
+					<li><label><input type="radio" class="chk" value="6" name="reason" /> 서비스 기능 불편</label></li>
+					<li><label><input type="radio" class="chk" value="3" name="reason" /> 제재조치로 이용제한 됨</label></li>
+					<li><label><input type="radio" class="chk" value="7" name="reason" /> 본 홈페이지 정책 불만</label></li>
+					<li><label><input type="radio" class="chk" value="4" name="reason" /> 개인정보 및 보안 우려</label></li>
+					<li><label><input type="radio" class="chk" value="8" name="reason" /> 이용 안 함</label></li>
+					<li><label><input type="radio" class="chk" value="9" name="reason" /> 기타</label></li>
+				</ul>
+				<div class="reasonText">
+					<textarea rows="10" cols="20" name="proposal" id="proposal"></textarea>
+				</div>
+
+				<div class="btnWrap btn2">
+					<span><a href="#;" class="btnL btnLConfirm" id="btn_with_submit">회원탈퇴</a></span>
+					<span><a href="#;" class="btnL btnLCancel" id="btn_with_cancel">취소</a></span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+<script type='text/javascript' src='/js/jquery.alphanumeric.js'></script>
+<script type='text/javascript' src='/js/jquery.validate.js'></script>
+<script type='text/javascript' src='/js/mem/mem_page.js'></script>
+</body>
+</html>

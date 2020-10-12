@@ -1,0 +1,34 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+  
+	session_destroy();
+	$_SESSION['suseremail'] = '';
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(7,2);
+});
+</script>
+</head>
+
+<body class="member">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<p class="location"><a href="#" class="home">홈</a> &gt; <span>회원</span> &gt; <strong>로그아웃</strong></p>
+		<h1 class="pageTitle"><span>로그아웃</span></h1>
+		<? include_once $GP -> INC_WWW . '/snb.php'; ?>
+		<div class="contents">
+			<div class="logout">
+				<p>휴앤유병원 홈페이지를 이용해 주셔서 감사합니다.</p>
+				<p><strong>LOGOUT</strong></p>
+				<p>로그아웃이 정상적으로 완료되었습니다.</p>
+			</div>
+			<div class="btnWrap">
+				<span><a href="/member/login.html" class="btnL btnLogin">로그인</a></span>
+			</div>
+		</div>
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

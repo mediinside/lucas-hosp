@@ -1,0 +1,387 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(1,3);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?> 
+			<div class="contents">
+				<h1 class="pageTitle"><span class="colorIdt">시설</span> 둘러보기</h1>
+
+				<div class="contSection">
+					<h2 class="subTitle"><strong>층별</strong>안내</h2>
+					<div class="section">
+						<div class="typeList">
+							<table style="min-width:100%;">
+								<caption>테이블 제목 및 정보</caption>
+								<colgroup>
+									<col style="width:30%">
+									<col style="width:">
+								</colgroup>
+								<thead class="hide">
+									<tr>
+										<th scope="col">층</th>
+										<th scope="col">내용</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">6F</th>
+										<td>총무부, 심사과, 영양팀, 의국, 옥상정원, 진단검사의학과, 영상의학과</td>
+									</tr>
+									<tr>
+										<th scope="row">5F</th>
+										<td>개방병동</td>
+									</tr>
+									<tr>
+										<th scope="row">4F</th>
+										<td>희망병동(여자 정신재활)</td>
+									</tr>
+									<tr>
+										<th scope="row">3F</th>
+										<td>행복병동(남자 정신재활)</td>
+									</tr>
+									<tr>
+										<th scope="row">2F</th>
+										<td>병원형 Wee센터 피노키오</td>
+									</tr>
+									<tr>
+										<th scope="row">1F</th>
+										<td>외래 전문클리닉, 진료상담, 심리검사, 마주보기 CAFE</td>
+									</tr>
+									<tr>
+										<th scope="row">B1</th>
+										<td>원무부, 입원상담, 사회사업부, 낮병원, 세미나실, QI부, 간호부</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div> 
+				</div>
+				<div class="contSection">
+					<h2 class="subTitle"><strong>둘러</strong>보기</h2>
+					<div class="section">
+
+						<div class="tab">
+							<p class="mobBtn"><button type="button">B1</button></p>
+							<ul class="tabList">
+								<li class="on"><a href="#">B1</a></li>
+								<li><a href="#">1F</a></li>
+								<li><a href="#">3F</a></li>
+								<li><a href="#">4F</a></li>
+								<li><a href="#">5F</a></li>
+								<li><a href="#">6F</a></li>
+							</ul>
+						</div>
+						<!--지하1층-->
+						<div class="tabCont hospView">
+							<div class="current hospView1">
+								<ul>
+									<li>
+										<img src="/images/contents/img_intro03_01_01.jpg" alt="" />
+										<span>B1 / 원무부 입원접수</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_01_02.jpg" alt="" />
+										<span>B1 / 원무부 입원상담실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_01_03.jpg" alt="" />
+										<span>B1 / 임상심리</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_01_04.jpg" alt="" />
+										<span>B1 / 피노키오 교실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_01_05.jpg" alt="" />
+										<span>B1 / 피노키오 프로그램실</span>
+									</li>
+								</ul>
+								<p class="controls">
+									<span class="slidePrev"></span>
+									<span class="slideNext"></span>
+								</p>
+								<script type="text/javascript">
+									$('.hospView1 ul').bxSlider({
+										speed : 500,
+										swipeThreshold : 50,
+										auto: false,
+										autoControls: false,
+										pager : false,
+										oneToOneTouch : false,
+										nextSelector : '.hospView1 .slideNext',
+										prevSelector : '.hospView1 .slidePrev',
+										nextText: '다음 슬라이드',
+										prevText: '이전 슬라이드'
+									});
+								</script>
+							</div>
+
+							<!--1층-->
+							<div class="hospView2">
+								<ul>
+									<li>
+										<img src="/images/contents/img_intro03_02_01.jpg" alt="" />
+										<span>1F / 외래</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_02_02.jpg" alt="" />
+										<span>1F / 외래접수</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_02_03.jpg" alt="" />
+										<span>1F / 진료 대기실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_02_04.jpg" alt="" />
+										<span>1F / 진료실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_02_05.jpg" alt="" />
+										<span>1F / 치료실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_02_06.jpg" alt="" />
+										<span>1F / 프로그램실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_02_07.jpg" alt="" />
+										<span>1F / 약제과</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_02_08.jpg" alt="" />
+										<span>1F / 병원외관</span>
+									</li>
+								</ul>
+								<p class="controls">
+									<span class="slidePrev"></span>
+									<span class="slideNext"></span>
+								</p>
+								<script type="text/javascript">
+									$('.hospView2 ul').bxSlider({
+										speed : 500,
+										swipeThreshold : 50,
+										auto: false,
+										autoControls: false,
+										pager : false,
+										oneToOneTouch : false,
+										nextSelector : '.hospView2 .slideNext',
+										prevSelector : '.hospView2 .slidePrev',
+										nextText: '다음 슬라이드',
+										prevText: '이전 슬라이드'
+									});
+								</script>
+							</div>
+
+							<!--3층-->
+							<div class="hospView3">
+								<ul>
+									<li>
+										<img src="/images/contents/img_intro03_03_01.jpg" alt="" />
+										<span>3F / 행복병동</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_03_02.jpg" alt="" />
+										<span>3F / 행복병동전경</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_03_03.jpg" alt="" />
+										<span>3F / 행복 간호사실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_03_04.jpg" alt="" />
+										<span>3F / 행복치료실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_03_05.jpg" alt="" />
+										<span>3F / 행복입원실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_03_06.jpg" alt="" />
+										<span>3F / 행복입원실</span>
+									</li>
+								</ul>
+								<p class="controls">
+									<span class="slidePrev"></span>
+									<span class="slideNext"></span>
+								</p>
+								<script type="text/javascript">
+									$('.hospView3 ul').bxSlider({
+										speed : 500,
+										swipeThreshold : 50,
+										auto: false,
+										autoControls: false,
+										pager : false,
+										oneToOneTouch : false,
+										nextSelector : '.hospView3 .slideNext',
+										prevSelector : '.hospView3 .slidePrev',
+										nextText: '다음 슬라이드',
+										prevText: '이전 슬라이드'
+									});
+								</script>
+							</div>
+
+							<!--4층-->
+							<div class="hospView4">
+								<ul>
+									<li>
+										<img src="/images/contents/img_intro03_04_01.jpg" alt="" />
+										<span>4F / 희망병동</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_04_02.jpg" alt="" />
+										<span>4F / 희망병동전경</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_04_03.jpg" alt="" />
+										<span>4F / 희망 간호사실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_04_04.jpg" alt="" />
+										<span>4F / 희망치료실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_04_05.jpg" alt="" />
+										<span>4F / 희망입원실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_04_06.jpg" alt="" />
+										<span>4F / 희망입원실</span>
+									</li>
+								</ul>
+								<p class="controls">
+									<span class="slidePrev"></span>
+									<span class="slideNext"></span>
+								</p>
+								<script type="text/javascript">
+									$('.hospView4 ul').bxSlider({
+										speed : 500,
+										swipeThreshold : 50,
+										auto: false,
+										autoControls: false,
+										pager : false,
+										oneToOneTouch : false,
+										nextSelector : '.hospView4 .slideNext',
+										prevSelector : '.hospView4 .slidePrev',
+										nextText: '다음 슬라이드',
+										prevText: '이전 슬라이드'
+									});
+								</script>
+							</div>
+
+							<!--5층-->
+							<div class="hospView5">
+								<ul>
+									<li>
+										<img src="/images/contents/img_intro03_05_01.jpg" alt="" />
+										<span>5F / 사랑병동</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_05_02.jpg" alt="" />
+										<span>5F / 원내매점</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_05_03.jpg" alt="" />
+										<span>5F / 사랑 개방병동</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_05_04.jpg" alt="" />
+										<span>5F / 사랑치료실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_05_05.jpg" alt="" />
+										<span>5F / 사랑입원실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_05_06.jpg" alt="" />
+										<span>5F / 사랑입원실</span>
+									</li>
+								</ul>
+								<p class="controls">
+									<span class="slidePrev"></span>
+									<span class="slideNext"></span>
+								</p>
+								<script type="text/javascript">
+									$('.hospView5 ul').bxSlider({
+										speed : 500,
+										swipeThreshold : 50,
+										auto: false,
+										autoControls: false,
+										pager : false,
+										oneToOneTouch : false,
+										nextSelector : '.hospView5 .slideNext',
+										prevSelector : '.hospView5 .slidePrev',
+										nextText: '다음 슬라이드',
+										prevText: '이전 슬라이드'
+									});
+								</script>
+							</div>
+
+							<!--6층-->
+							<div class="hospView6">
+								<ul>
+									<li>
+										<img src="/images/contents/img_intro03_06_01.jpg" alt="" />
+										<span>6F / 영상의학과</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_06_02.jpg" alt="" />
+										<span>6F / 진단검사의학과</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_06_03.jpg" alt="" />
+										<span>6F / 옥상정원</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_06_04.jpg" alt="" />
+										<span>6F / 사무실</span>
+									</li>
+									<li>
+										<img src="/images/contents/img_intro03_06_05.jpg" alt="" />
+										<span>6F / 직원식당</span>
+									</li>
+								</ul>
+								<p class="controls">
+									<span class="slidePrev"></span>
+									<span class="slideNext"></span>
+								</p>
+								<script type="text/javascript">
+									$('.hospView6 ul').bxSlider({
+										speed : 500,
+										swipeThreshold : 50,
+										auto: false,
+										autoControls: false,
+										pager : false,
+										oneToOneTouch : false,
+										nextSelector : '.hospView6 .slideNext',
+										prevSelector : '.hospView6 .slidePrev',
+										nextText: '다음 슬라이드',
+										prevText: '이전 슬라이드'
+									});
+								</script>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+				
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

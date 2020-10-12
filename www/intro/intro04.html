@@ -1,0 +1,949 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(1,4);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?>
+			<div class="contents">
+				<h1 class="pageTitle"><span class="colorIdt">병원</span> 이용안내</h1>
+
+				<div class="tab subSection">
+					<p class="mobBtn"><button type="button">탭1</button></p>
+					<ul class="tabList">
+						<li class="on"><a href="#">외래 클리닉</a></li>
+						<li><a href="#">입원 및 퇴원 안내 </a></li>
+						<li><a href="#">진료기록 및 증명서 발급</a></li>
+						<li><a href="#">원내전화번호</a></li>
+					</ul>
+				</div>
+				<div class="tabCont">
+					<!--탭1 / 외래 클리닉-->
+					<div>
+						<div class="contSection">
+							<h2 class="subTitle">상담 및 <strong>예약 전화</strong></h2>
+							<div class="section">
+								<p class="hospTel">대표번호 032-310-0100<br />입원상담 032-310-0105</p>
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle">외래 <strong>진료 안내</strong></h2>
+							<div class="section">
+								<p class="subTitle3">진료 시간</p>
+								<div class="typeList">
+									<table style="min-width:100%;">
+										<caption>테이블 제목 및 정보</caption>
+										<colgroup>
+											<col style="width:13%" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" colspan="2">평일</th>
+												<th scope="col">토요일</th>
+												<th scope="col">일요일/공휴일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td align="center">오전</td>
+												<td align="center">09:30 ~ 12:30</td>
+												<td align="center" rowspan="3">09:30 ~ 13:00<br> 당직의 진료</td>
+												<td align="center" rowspan="3">휴진 / 예약불가</td>
+											</tr>
+											<tr>
+												<td align="center">오후</td>
+												<td align="center">13:30 ~ 18:00</td>
+											</tr>
+											<tr>
+												<td align="center">점심시간</td>
+												<td align="center">12:30 ~ 13:30</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="docTime subSection">
+									<p class="subTitle3">외래 진료 시간표</p>
+									<!--김승겸 원장-->
+									<div class="section leftImg">
+										<div class="contWrap imgCont">
+											<img src="/images/contents/img_intro04_01_01.jpg" alt="">
+											<div class="caption">
+												<p class="name"><strong>김승겸</strong> 병원장 <span>/ 정신과전문의</span></p>
+											</div>
+										</div>
+										<div class="contWrap txtCont">
+											<div class="roundBox">
+												<p class="iconTitle4 colorIdt">조현병, 조울병, 기질적 정신장애, 치매</p>
+											</div>
+											<div class="typeList">
+												<table style="min-width:100%;">
+													<caption>테이블 제목 및 정보</caption>
+													<colgroup>
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">요일</th>
+															<th scope="col">월</th>
+															<th scope="col">화</th>
+															<th scope="col">수</th>
+															<th scope="col">목</th>
+															<th scope="col">금</th>
+														</tr>
+													</thead>
+													<tbody class="alignCenter">
+														<tr>
+															<td><strong class="colorBlack">오전</strong></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td><strong class="colorBlack">오후</strong></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td class="colorIdt">●</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+									<!--윤정현 과장-->
+									<div class="section leftImg subSection">
+										<div class="contWrap imgCont">
+											<img src="/images/contents/img_intro04_01_05.jpg" alt="">
+											<div class="caption">
+												<p class="name"><strong>윤정현</strong> 과장 <span>/ 정신과전문의</span></p>
+											</div>
+										</div>
+										<div class="contWrap txtCont">
+											<div class="roundBox">
+												<p class="iconTitle4 colorIdt">중독 정신의학, 노인 정신의학</p>
+											</div>
+											<div class="typeList">
+												<table style="min-width:100%;">
+													<caption>테이블 제목 및 정보</caption>
+													<colgroup>
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">요일</th>
+															<th scope="col">월</th>
+															<th scope="col">화</th>
+															<th scope="col">수</th>
+															<th scope="col">목</th>
+															<th scope="col">금</th>
+														</tr>
+													</thead>
+													<tbody class="alignCenter">
+															<tr>
+															<td><strong class="colorBlack">오전</strong></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+															<td class="colorIdt">●</td>
+															<td class="colorIdt">●</td>
+															<td></td>
+														</tr>
+														<tr>
+															<td><strong class="colorBlack">오후</strong></td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+
+									<!--김지현 과장
+									<div class="section leftImg subSection">
+										<div class="contWrap imgCont">
+											<img src="/images/contents/img_intro04_01_09.jpg" alt="">
+											<div class="caption">
+												<p class="name"><strong>김지현</strong> 과장 <span>/ 정신과전문의</span></p>
+											</div>
+										</div>
+										<div class="contWrap txtCont">
+											<div class="roundBox">
+												<p class="iconTitle4 colorIdt">청소년정신의학, 기분장애, 불안장애, 수면장애</p>
+											</div>
+											<div class="typeList">
+												<table style="min-width:100%;">
+													<caption>테이블 제목 및 정보</caption>
+													<colgroup>
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">요일</th>
+															<th scope="col">월</th>
+															<th scope="col">화</th>
+															<th scope="col">수</th>
+															<th scope="col">목</th>
+															<th scope="col">금</th>
+														</tr>
+													</thead>
+													<tbody class="alignCenter">
+														<tr>
+															<td><strong class="colorBlack">오전</strong></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td><strong class="colorBlack">오후</strong></td>
+															<td></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+															<td class="colorIdt">●</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+-->
+									<div class="section leftImg subSection">
+										<div class="contWrap imgCont">
+											<img src="/images/contents/img_intro04_01_11.jpg" alt="">
+											<div class="caption">
+												<p class="name"><strong>하수희</strong> 과장 <span>/ 정신과전문의</span></p>
+											</div>
+										</div>
+										<div class="contWrap txtCont">
+											<div class="roundBox">
+												<p class="iconTitle4 colorIdt">조현병, 기분장애, 불안장애 </p>
+											</div>
+											<div class="typeList">
+												<table style="min-width:100%;">
+													<caption>테이블 제목 및 정보</caption>
+													<colgroup>
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">요일</th>
+															<th scope="col">월</th>
+															<th scope="col">화</th>
+															<th scope="col">수</th>
+															<th scope="col">목</th>
+															<th scope="col">금</th>
+														</tr>
+													</thead>
+													<tbody class="alignCenter">
+														<tr>
+															<td><strong class="colorBlack">오전</strong></td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td><strong class="colorBlack">오후</strong></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+									<div class="section leftImg subSection">
+										<div class="contWrap imgCont">
+											<img src="/images/contents/img_intro04_01_12.jpg" alt="">
+											<div class="caption">
+												<p class="name"><strong>구자현</strong> 과장 <span>/ 정신과전문의</span></p>
+											</div>
+										</div>
+										<div class="contWrap txtCont">
+											<div class="roundBox">
+												<p class="iconTitle4 colorIdt">조현병, 기분장애, 불안장애, 수면장애</p>
+											</div>
+											<div class="typeList">
+												<table style="min-width:100%;">
+													<caption>테이블 제목 및 정보</caption>
+													<colgroup>
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">요일</th>
+															<th scope="col">월</th>
+															<th scope="col">화</th>
+															<th scope="col">수</th>
+															<th scope="col">목</th>
+															<th scope="col">금</th>
+														</tr>
+													</thead>
+													<tbody class="alignCenter">
+														<tr>
+															<td><strong class="colorBlack">오전</strong></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+														</tr>
+														<tr>
+															<td><strong class="colorBlack">오후</strong></td>
+															<td class="colorIdt">●</td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td class="colorIdt">●</td>
+															<td class="colorIdt"></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								<!-- <div class="section leftImg subSection">
+										<div class="contWrap imgCont">
+											<img src="/images/contents/img_intro04_01_13.jpg" alt="">
+											<div class="caption">
+												<p class="name"><strong>김시영</strong> 과장 <span>/ 정신과전문의</span></p>
+											</div>
+										</div>
+										<div class="contWrap txtCont">
+											<div class="roundBox">
+												<p class="iconTitle4 colorIdt">소아청소년정신의학, 기분장애, 수면장애</p>
+											</div>
+											<div class="typeList">
+												<table style="min-width:100%;">
+													<caption>테이블 제목 및 정보</caption>
+													<colgroup>
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">요일</th>
+															<th scope="col">월</th>
+															<th scope="col">화</th>
+															<th scope="col">수</th>
+															<th scope="col">목</th>
+															<th scope="col">금</th>
+														</tr>
+													</thead>
+													<tbody class="alignCenter">
+														<tr>
+															<td><strong class="colorBlack">오전</strong></td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+														</tr>
+														<tr>
+															<td><strong class="colorBlack">오후</strong></td>
+															<td></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div> -->
+                                    <div class="section leftImg subSection">
+										<div class="contWrap imgCont">
+											<img src="/images/contents/img_intro04_01_14.jpg" alt="">
+											<div class="caption">
+												<p class="name"><strong>김다슬</strong> 과장 <span>/ 정신과전문의</span></p>
+											</div>
+										</div>
+										<div class="contWrap txtCont">
+											<div class="roundBox">
+												<p class="iconTitle4 colorIdt">정신약물학, 정신신체의학, 수면의학, 불안의학, 기분장애</p>
+											</div>
+											<div class="typeList">
+												<table style="min-width:100%;">
+													<caption>테이블 제목 및 정보</caption>
+													<colgroup>
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+														<col style="width:16%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">요일</th>
+															<th scope="col">월</th>
+															<th scope="col">화</th>
+															<th scope="col">수</th>
+															<th scope="col">목</th>
+															<th scope="col">금</th>
+														</tr>
+													</thead>
+													<tbody class="alignCenter">
+														<tr>
+															<td><strong class="colorBlack">오전</strong></td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+														</tr>
+														<tr>
+															<td><strong class="colorBlack">오후</strong></td>
+															<td></td>
+															<td></td>
+															<td class="colorIdt">●</td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--탭2 / 입원 및 퇴원 안내-->
+					<div>
+						<div class="contSection">
+							<h2 class="subTitle">상담 및 <strong>예약 전화</strong></h2>
+							<div class="section">
+								<p class="hospTel">대표번호 032-310-0100<br />입원상담 032-310-0105</p>
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle"><strong>입퇴원</strong> 절차</h2>
+							<div class="section">
+								<p class="subTitle3">입원 절차</p>
+								<div class="roundBox processIcon">
+									<div>
+										<span><img src="/images/contents/img_intro04_02_01.gif" alt="" /></span>
+										<p>원무부 접수</p>
+									</div>
+									<div>
+										<span><img src="/images/contents/img_intro04_02_02.gif" alt="" /></span>
+										<p>전문의 진료</p>
+									</div>
+									<div>
+										<span><img src="/images/contents/img_intro04_02_03.gif" alt="" /></span>
+										<p>병동 안내</p>
+									</div>
+									<div>
+										<span><img src="/images/contents/img_intro04_02_04.gif" alt="" /></span>
+										<p class="line2">병동 간호사<br />사회복지사 면담</p>
+									</div>
+									<div>
+										<span><img src="/images/contents/img_intro04_02_05.gif" alt="" /></span>
+										<p>원무부 서류작성</p>
+									</div>
+								</div>
+								<p class="subTitle3">퇴원 절차</p>
+								<div class="roundBox processIcon">
+									<div>
+										<span><img src="/images/contents/img_intro04_02_06.gif" alt="" /></span>
+										<p class="line2">상담 후 전문의<br />퇴원 결정</p>
+									</div>
+									<div>
+										<span><img src="/images/contents/img_intro04_02_07.gif" alt="" /></span>
+										<p class="line2">원무부 퇴원 수속 (수납)</p>
+									</div>
+									<div>
+										<span><img src="/images/contents/img_intro04_02_08.gif" alt="" /></span>
+										<p class="line2">병동 간호사<br />사회복지사 면담</p>
+									</div>
+									<div>
+										<span><img src="/images/contents/img_intro04_02_09.gif" alt="" /></span>
+										<p>외래진료 예약</p>
+									</div>
+									<div>
+										<span><img src="/images/contents/img_intro04_02_10.gif" alt="" /></span>
+										<p>귀가</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle">입원 <strong>준비물</strong></h2>
+							<div class="section">
+								<ul class="liststyle1">
+									<li><p class="ti">입원 전</p><p class="con">타 병원에서 전원 시, 소견서, 입원기록, 검사기록</p></li>
+									<li><p class="ti">입원 시</p><p class="con">1. 의료보험증 혹은 의료급여증<br />
+									2. 주민등록등본 1부(등본에 보호자와 환자가 따로 등재된 경우, 가족임을 증명할 수 있는 가족관계증명서 1부 필요함)<br />
+									3. 동의 입원 시 보호동의자는 2명 이상이어야 함.</p></li>
+									<li><p class="ti">입원 후</p><p class="con">1. 준비물 : 속옷, 양말, 수건, 세면도구 등(세면도구는 원내 구입 가능)<br />
+									2. 금지품목 : 상해 위험 있는 물건, 라이터, 현금, 핸드폰 등</p></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle">병동 <strong>생활 안내</strong></h2>
+							<div class="section">
+								<p class="subTitle3">식사 및 투약 시간</p>
+								<div class="typeList">
+									<table style="min-width:100%;">
+										<caption>테이블 제목 및 정보</caption>
+										<colgroup>
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">-</th>
+												<th scope="col">아침</th>
+												<th scope="col">점심</th>
+												<th scope="col">저녁</th>
+												<th scope="col">취침 전</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td align="center">식사</td>
+												<td align="center">07:20~08:00</td>
+												<td align="center">12:00~12:30</td>
+												<td align="center">17:20~18:00</td>
+												<td align="center">-</td>
+											</tr>
+											<tr>
+												<td align="center">투약</td>
+												<td align="center">08:30</td>
+												<td align="center">13:00</td>
+												<td align="center">18:30</td>
+												<td align="center">21:00</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="section subSection">
+								<p class="subTitle3">개인위생 관리</p>
+								<ul class="bgList bulType">
+									<li>세면 및 목욕 : 오전6:00~오후9:00 중, 편한 시간에 샤워실 이용</li>
+									<li>이ㆍ미용 : 3주 1회 무료 실시</li>
+								</ul>
+							</div>
+
+							<div class="section subSection">
+								<p class="subTitle3">흡연</p>
+								<ul class="bgList bulType">
+									<li>건물 내 흡연 금지 정책에 따라 병동 내 흡연은 불가능하며, 정해진 병동 별 흡연 시간에 옥상 정원의 지정된 흡연장소에서 시행</li>
+								</ul>
+							</div>
+
+							<div class="section subSection">
+								<p class="subTitle3">간식비</p>
+								<ul class="bgList bulType">
+									<li>매점에서 생필품 및 간식 구입에 사용.</li>
+									<li>원내 매점 : 사회적 기업, 행복한 동행 사업단 운영 중임</li>
+									<li>간식비 입금 방법 : 환자의 성명으로 입금해야 확인 가능함</li>
+								</ul>
+								<div class="roundBox subSection2">
+									<p class="iconTitle1">계좌 : 국민은행 230201-04-176373 (예금주: 행복을 나누는 사람들 행복한 동행)</p>
+								</div>
+							</div>
+
+							<div class="section subSection">
+								<p class="subTitle3">면회</p>
+								<div class="typeList">
+									<table>
+										<caption>테이블 제목 및 정보</caption>
+										<colgroup>
+											<col style="width:" />
+											<col style="width:" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">병동</th>
+												<th scope="col">면회 시간</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td align="center">행복병동(3층)</td>
+												<td align="center">평일 : 오후 1시~2시 / 오후 7시~7시50분<br />주말 및 공휴일 : 오후 1시~4시</td>
+											</tr>
+											<tr>
+												<td align="center">희망병동(4층)</td>
+												<td align="center">평일 : 오후 7시~8시<br />주말 및 공휴일 : 오후 1시~3시</td>
+											</tr>
+											<tr>
+												<td align="center">사랑병동(5층)</td>
+												<td align="center">매일 : 오전 10시~오후 7시<br />(단, 투약, 식사, 프로그램 중에는 잠시 기다리셔야 합니다)</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<ul class="bgList bulType subSection2">
+									<li>면회 시 반입 금지 품목 : 질식의 위험이 있는 떡, 견과류와 위험한 물건, 라이터, 현금 등. </li>
+									<li>면회 가능 여부와 반입 금지 품목에 관한 질의는 병동 간호사에게 문의</li>
+								</ul>
+							</div>
+
+							<div class="section subSection">
+								<p class="subTitle3">외박, 외출</p>
+								<ul class="bgList bulType">
+									<li>병동 규칙과 주치의 결정에 따라 시행하며 보호자 동행이 원칙임</li>
+									<li>외박, 외출 가능 여부에 관한 문의는 각 병동 간호사에게 문의</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<!--탭3 / 진료기록 및 증명서 발급-->
+					<div>
+						<div class="contSection">
+							<h2 class="subTitle"><strong>개인정보</strong> 보호의 의무</h2>
+							<div class="section">
+								<ul class="bgList bulType">
+									<li>환자의 개인정보 보호를 위해 의료기관은 의무기록의 비밀을 유지할 책임이 있습니다.</li>
+									<li>환자의 의무기록 열람 및 사본교부는 환자의 동의가 있어야 가능합니다.</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle"><strong>신청</strong> 절차</h2>
+							<!--<div class="section processList">
+								<div class="contWrap">
+									<div class="sec">
+										<span>1</span>
+										<p>환자(보호자)신청</p>
+									</div>
+									<div class="sec">
+										<span>2</span>
+										<p>입원 환자</p>
+									</div>
+									<div class="sec">
+										<span>3</span>
+										<p>병동, 원무부에 신청</p>
+									</div>
+									<div class="sec">
+										<span>4</span>
+										<p>주치의 판단</p>
+									</div>
+								</div>
+								<div class="contWrap">
+									<div class="sec">
+										<span>5</span>
+										<p class="line2">신청자는 증명서 발급 신청서 및<br />구비서류를 원무팀에 제출</p>
+									</div>
+									<div class="sec">
+										<span>6</span>
+										<p class="line2">원무팀은 신청서 및 <br />구비서류 확인</p>
+									</div>
+									<div class="sec">
+										<span>7</span>
+										<p>서류 발급 비용 수납</p>
+									</div>
+									<div class="sec">
+										<span>8</span>
+										<p>관련 서류 보관</p>
+									</div>
+								</div>
+							</div>-->
+							<div class="section">
+								<ul class="liststyle1 subSection2">
+									<li><p class="ti">입원환자</p><p class="con">발급 희망일 2~3일 전, 해당 병동 간호사에게 신청하시기 바랍니다.</p></li>
+									<li><p class="ti">퇴원, 외래환자</p><p class="con">1층 안내데스크에 신청하시고 발급비를 수납하시기 바랍니다.</p></li>
+									<li><p class="ti">사전 신청 요망</p><p class="con">증명서는 당일 발급이 어려우므로 미리 신청하시기 바랍니다.</p></li>
+									<li><p class="ti">증명서의 용도</p><p class="con">모든 증명서는 용도를 말씀해주셔야 정확한 내용이 작성될 수 있습니다.<br />
+									(보험회사 제출, 경찰서 제출, 직장 제출 등, 용도를 참고하여, 사용 기관이 확인하고자 하는 항목에 대한 언급을 포함해 작성 가능)</p></li>
+									<li><p class="ti">종류에 따른 발급 절차</p>
+										<div class="con">
+											<div class="typeList">
+												<table style="min-width:100%;">
+													<caption>테이블 제목 및 정보</caption>
+													<colgroup>
+														<col style="width:" />
+														<col style="width:30%" />
+														<col style="width:30%" />
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">증명서 종류</th>
+															<th scope="col">발급부서</th>
+															<th scope="col">비고</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>진단서, 소견서, 병사용진단서, 장애진단서 및 병명 또는 소견이 필요한 증명서, 입/통원 확인서</td>
+															<td>진료과 주치의 발급 (진료 필요)</td>
+															<td>진찰료 및 수수료 발생</td>
+														</tr>
+														<tr>
+															<td>입/통원 확인서</td>
+															<td>원무부 발급 (진료 불필요)</td>
+															<td>병명 및 소견 명기 안함 무료</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+										</div>
+
+									</li>
+									<li><p class="ti">서류발급 접수시간</p><p class="con">- 평  일 : 오전 09시 30분 ~ 오후 06시 00분<br />
+									- 토요일 : 오전 09시 30분 ~ 오후 01시 00분 </p></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="contSection">
+							<h2 class="subTitle">의무기록 및 진단서 발급 시 <strong>구비서류 안내</strong></h2>
+							<div class="section">
+								<div class="roundBox">
+									<p class="iconTitle3">의료법 시행규칙 제13조 2항 보건복지가족부령 제158호에 의거하여 다음 해당서류가 모두 구비되어야 발급이 가능합니다.</p>
+								</div>
+								<div class="typeList subSection2">
+									<table>
+										<caption>테이블 제목 및 정보</caption>
+										<colgroup>
+											<col style="width:" />
+											<col style="width:" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">신청자</th>
+												<th scope="col">구비서류</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>환자본인</td>
+												<td>본인임을 확인할 수 있는 서류 (주민등록증,여권,운전면허증 등 사진이 있는 증명서)</td>
+											</tr>
+											<tr>
+												<td>환자의 가족</td>
+												<td>1. 신청한자의 신분증<br />
+												 2. 가족관계증명서, 주민등록등본 등 가족관계임을 확인할 수 있는 서류<br />
+												 3. 환자가 자필서명한 동의서 (별지 제9호의 2서식)<br />
+												 4. 환자의 신분증 사본</td>
+											</tr>
+											<tr>
+												<td>환자가 지정한 대리인(보험회사 등)</td>
+												<td> 1. 신청한자의 신분증<br />
+												 2. 환자가 자필 서명한 동의서 (별지 제9호의 2서식)<br />
+												 3. 환자가 자필 서명한 위임장 (별지 제9호의 3서식)<br />
+												 4. 환자의 신분증 사본</td>
+											</tr>
+											<tr>
+												<td>미성년자(만14세 미만) 법적대리인</td>
+												<td>1. 신청한자의 신분증)<br />
+												 2. 가족관계증명서, 주민등록등본 등 가족관계임을 확인할 수 있는 서류</td>
+											</tr>
+											<tr>
+												<td>환자가 군복무중인 경우(가족)</td>
+												<td>1. 신청한자의 신분증<br />
+												 2. 가족관계증명서, 주민등록등본 등 가족관계임을 확인할 수 있는 서류<br />
+												 3. 병적증명서 또는 복무확인서</td>
+											</tr>
+											<tr>
+												<td>환자가 사망한 경우</td>
+												<td>1. 신청한자의 신분증<br />
+												 2. 가족관계증명서, 주민등록등본 등 가족관계임을 확인할 수 있는 서류<br />
+												 3. 사망진단서 또는 제적등본</td>
+											</tr>
+											<tr>
+												<td>환자가 의식불명 또는 중증의 질환․ 부상으로 자필서명을 할 수 없는 경우</td>
+												<td>1. 신청한자의 신분증<br />
+												 2. 가족관계증명서, 주민등록등본 등 가족관계임을 확인할 수 있는 서류<br />
+												 3. 환자가 의식불명 또는 중증의 질환․ 부상으로 자필서명을 할 수 없음을 확인할 수 있는 서류</td>
+											</tr>
+											<tr>
+												<td>환자가 행방불명인 경우</td>
+												<td>1. 신청한자의 신분증<br />
+												 2. 가족관계증명서, 주민등록등본 등 가족관계임을 확인할 수 있는 서류<br />
+												 3. 주민등록등본, 법원의 실종선고 결정문 등 행방불명 사실을 확인할 수 있는 서류</td>
+											</tr>
+											<tr>
+												<td>환자가 의사무능력자인 경우</td>
+												<td> 1. 신청한자의 신분증<br />
+												 2. 가족관계증명서, 주민등록등본 등 가족관계임을 확인할 수 있는 서류<br />
+												 3. 법원의 금치산 선고 결정문 또는 의사무능력자임을 증명하는 정신과 전문의의 진단서</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="roundBox subSection2">
+									<p class="iconTitle1">그 외의 진단서 발급에 대한 자세한 사항은 (032-310-0100) 로 문의하시기 바랍니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 탭4 / 원내전화번호 -->
+					<div>
+						<div class="contSection">
+							<h2 class="subTitle">원내전화번호</h2>
+							<div class="section">
+								<ul class="liststyle1">
+									<li><p class="ti">대표번호</p><p class="con">032-310-0100</p></li>
+									<li><p class="ti">입원상담</p><p class="con">032-310-0105</p></li>
+									<li><p class="ti">팩스</p><p class="con">032-310-0111</p></li>
+								</ul>
+								<div class="typeList subSection">
+									<table style="min-width:100%;">
+										<caption>원내전화번호</caption>
+										<colgroup>
+											<col style="width:">
+											<col style="width:">
+											<col style="width:">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" colspan="2">구분</th>
+												<th scope="col">직통번호</th>
+											</tr>
+										</thead>
+										<tbody class="alignCenter">
+											<tr>
+												<td rowspan="6">원무부</td>
+												<td >입원상담</td>
+												<td>032-310-0105</td>
+											</tr>
+											<tr>
+												<td class="line">외래진료</td>
+												<td>032-310-0101</td>
+											</tr>
+											<tr>
+												<td class="line">병동입원환자 관리</td>
+												<td>032-310-0102</td>
+											</tr>
+											<tr>
+												<td class="line">병원비 수납, 제증명서 발급</td>
+												<td>032-310-0103</td>
+											</tr>
+											<tr>
+												<td class="line">그외 문의 사항</td>
+												<td>032-310-0105</td>
+											</tr>
+											<tr>
+												<td class="line">낮병원 담당</td>
+												<td>032-310-0109</td>
+											</tr>
+											<tr>
+												<td rowspan="5">사회사업부</td>
+												<td>문의상담</td>
+												<td>032-310-0175</td>
+											</tr>
+											<tr>
+												<td class="line">정신재활 담당</td>
+												<td>032-310-0174</td>
+											</tr>
+											<tr>
+												<td class="line">알코올 담당</td>
+												<td>032-310-0176</td>
+											</tr>
+											<tr>
+												<td class="line">낮병원 담당</td>
+												<td>032-310-0189</td>
+											</tr>
+											<tr>
+												<td class="line">병원형 Wee센터</td>
+												<td>032-310-0171~2</td>
+											</tr>
+											<tr>
+												<td rowspan="3">병동</td>
+												<td>행복병동</td>
+												<td>032-310-0130</td>
+											</tr>
+											<tr>
+												<td class="line">희망병동</td>
+												<td>032-310-0150</td>
+											</tr>
+											<tr>
+												<td class="line">사랑병동</td>
+												<td>032-310-0160</td>
+											</tr>
+											<!-- <tr>
+												<td colspan="2">총무부</td>
+												<td>032-310-0106</td>
+											</tr> -->
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>

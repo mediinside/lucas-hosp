@@ -1,0 +1,263 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';
+	 include_once $GP -> HOME."main_lib/main_proc.php";
+
+	 $Main_Notice = Main_Notice();
+	 $Main_Inside1 = Main_Inside('20');
+	 $Main_Inside2 = Main_Inside('30');
+	 $Main_Inside3 = Main_Inside('40');
+
+	 $Main_Inside_all1 = Main_Inside_ALL('20');
+	 $Main_Inside_all2 = Main_Inside_ALL('30');
+	 $Main_Inside_all3 = Main_Inside_ALL('40');
+
+
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb();
+});
+</script>
+</head>
+
+<body class="main">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="mainSlide">
+			<ul>
+				<li style="background:url('/images/main/img_slide10.jpg') no-repeat 50%;background-size: auto 100%;">
+					<a href="#"><img src="/images/main/img_slide10_mo.jpg" alt="루카스 병원 PPM" class="img"></a>
+				</li>
+				<li style="background:url('/images/main/img_slide9.jpg') no-repeat 50%;background-size: auto 100%;"">
+					<a href="#"><img src="/images/main/img_slide9_mo.jpg" alt="루카스병원 세이브더 칠드런 2019년 검사 및 외래비 지원사업 협력병원 지정" class="img"></a>
+				</li>
+				<li style="background:url('/images/main/img_slide8.jpg') no-repeat 50%;background-size: auto 100%;">
+					<a href="#"><img src="/images/main/img_slide8_mo.jpg" alt="루카스 병원 경기도 교육청 병원형 위센터 피노키오 위탁운영" class="img"></a>
+				</li>
+				<li class="slide7"><a href="#">
+					<div class="cont">
+						<p class="txt1">2017년 <span class="yellow">루카스병원 2주기</span></p>
+						<p class="txt2">보건복지부 평가 <span class="yellow">인증획득</span><img src="/images/img_slide7_logo.png" alt="로고" /><br /><span class="txt3">( 2018. 3. 6 ~ 2022. 3. 5 )</span></p>
+					</div>
+					<img src="/images/main/img_slide7_mo.jpg" alt="" class="img">
+				</a></li>
+
+				<li class="slide6"><a href="#">
+					<div class="cont">
+						<p class="txt1">2017년 <span class="blue">루카스병원</span><img src="/images/slide-icon.png" alt="로고" /></p>
+						<p class="txt2">국민건강보험공단 <span class="blue">심사평가결과</span> <strong class="blue">1등급</strong></p>
+					</div>
+					<img src="/images/main/img_slide6_mo.jpg" alt="" class="img">
+				</a></li>
+
+				<li class="slide1"><a href="#">
+					<div class="cont">
+						<p class="txt1">함께 고민하고 함께 뛰어넘기</p>
+						<p class="txt2"><span>루카스</span> 정신건강 클리닉</p>
+					</div>
+					<img src="/images/main/img_slide1_mo.jpg" alt="" class="img">
+				</a></li>
+				<li class="slide2"><a href="#">
+					<div class="cont">
+						<p class="txt1">좋은 재활이 곧 좋은 치료입니다</p>
+						<p class="txt2"><span>루카스</span> 정신재활 클리닉</p>
+					</div>
+					<img src="/images/main/img_slide2_mo.jpg" alt="" class="img">
+				</a></li>
+				<!-- <li class="slide3"><a href="#">
+					<p class="txt1">증상 완화, 그 너머를 봅니다.</p>
+					<p class="txt2"><span>낮병원,</span> 나래</p>
+				</a></li> -->
+				<li class="slide4"><a href="#">
+					<div class="cont">
+						<p class="txt1">친구들의 건강한 성장을 믿습니다</p>
+						<p class="txt2"><span class="colorWhite">청소년 교실,</span> 피노키오</p>
+					</div>
+					<img src="/images/main/img_slide4_mo.jpg" alt="" class="img">
+				</a></li>
+<!-- 				<li class="slide5"><a href="#">
+					<p class="txt1">삶으로 돌아가는 용기 있는 선택</p>
+					<p class="txt2"><span>루카스</span> 알코올 클리닉</p>
+				</a></li> -->
+			</ul>
+			<p class="slidePager">
+				<button type="button" data-slide-index="0">1</button>
+				<button type="button" data-slide-index="1">2</button>
+				<button type="button" data-slide-index="2">3</button>
+				<button type="button" data-slide-index="3">4</button>
+				<button type="button" data-slide-index="4">5</button>
+				<button type="button" data-slide-index="5">6</button>
+				<button type="button" data-slide-index="6">7</button>
+			</p>
+		</div>
+		<script type="text/javascript">
+		var mainSlide = $('.mainSlide ul').bxSlider({
+			mode : 'fade',
+			speed : 1000,
+			swipeThreshold : 50,
+			auto: true,
+			autoControls: false,
+			pagerCustom: '.mainSlide .slidePager',
+			controls : false,
+			oneToOneTouch : false
+		});
+		</script>
+		<div class="mainBgSection">
+			<div class="mainContent">
+				<ul class="mainMidLink1">
+					<li class="link1"><a href="/department/department01.html">외래 전문 클리닉</a></li>
+					<li class="link2"><a href="/clinic/clinic01.html">외래 특화 클리닉</a></li>
+					<li class="link3"><a href="/herb/herb01.html">열린 재활 커뮤니티</a></li>
+					<li class="link4"><a href="/welfare/welfare01.html">입원 치료 프로그램</a></li>
+				</ul>
+				<div class="hospInfoLink">
+					<p><strong>찾아오시는 길</strong> <a href="/intro/intro07.html">더보기</a></p>
+					<div class="adrs">
+						<strong>문의 및 상담</strong>
+						<div>
+							<span class="icon">icon</span>
+							<span><a href="tel:0323100100" class="tel">대표번호 032-310-0100</a></span>
+							<span><a href="tel:0323100105" class="tel">입원상담 032-310-0105</a></span>
+						</div>
+						경기도 부천시 소사구 경인로 88 (송내동 389-2)
+					</div>
+					<p><strong>병원이용안내</strong> <a href="/intro/intro04.html">더보기</a></p>
+					<p><strong>병원둘러보기</strong> <a href="/intro/intro03.html">더보기</a></p>
+				</div>
+				<div class="mainMidSlide">
+					<div class="mainNotice">
+						<h2>루카스 소식</h2>
+						<ul>
+							<?=$Main_Notice ?>
+							<!-- li><a href="#">
+								<strong class="tit">인천부천 정신보건수련 2차 지부교육 (제목은 최대 2줄까지 노출됩니다.</strong>
+								<span class="txt">2015년 5월 6일 정신보건 수련 사회복지사를 위한 지부 교육이 있었습니다. 환자들에게 더 좋은 서비스에 대해 무엇을 고려해야 하는지 배울 수 있는 시간이었고, 다문화 가정의...</span>
+								<span class="date">2015.05.08</span>
+							</a></li>
+							<li><a href="#">
+								<strong class="tit">인천부천 정신보건수련 2차 지부교육 (제목은 최대 2줄까지 노출됩니다.</strong>
+								<span class="txt">2015년 5월 6일 정신보건 수련 사회복지사를 위한 지부 교육이 있었습니다. 환자들에게 더 좋은 서비스에 대해 무엇을 고려해야 하는지 배울 수 있는 시간이었고, 다문화 가정의...</span>
+								<span class="date">2015.05.08</span>
+							</a></li>
+							<li><a href="#">
+								<strong class="tit">인천부천 정신보건수련 2차 지부교육 (제목은 최대 2줄까지 노출됩니다.</strong>
+								<span class="txt">2015년 5월 6일 정신보건 수련 사회복지사를 위한 지부 교육이 있었습니다. 환자들에게 더 좋은 서비스에 대해 무엇을 고려해야 하는지 배울 수 있는 시간이었고, 다문화 가정의...</span>
+								<span class="date">2015.05.08</span>
+							</a></li -->
+						</ul>
+						<p class="controls">
+							<a href="/community/community01.html" class="more">+ 더보기</a>
+							<span class="slidePrev"></span>
+							<span class="slideNext"></span>
+						</p>
+					</div>
+					<div class="mainMovSlide">
+						<ul>
+							<li>
+								<img src="/images/main/banner_190730.jpg">
+							</li>
+							<li>
+								<img src="/images/main/banner_190401_1.jpg">
+							</li>
+							<li>
+								<img src="/images/main/banner_190401_2.jpg">
+							</li>
+							<li>
+								<img src="/images/main/banner06_180323.jpg">
+							</li>
+							<li>
+								<img src="/images/main/banner05_180111.jpg">
+							</li>
+						</ul>
+						<p class="controls">
+							<span class="slidePrev"></span>
+							<span class="slideNext"></span>
+						</p>
+					</div>
+				</div>
+				<script type="text/javascript">
+				$('.mainNotice ul').bxSlider({
+					speed : 300,
+					swipeThreshold : 50,
+					auto: false,
+					autoControls: false,
+					pager: false,
+					oneToOneTouch : false,
+					prevSelector : '.mainNotice .slidePrev',
+					nextSelector : '.mainNotice .slideNext',
+					prevText: '이전 소식',
+					nextText: '다음 소식'
+				});
+				$('.mainMovSlide ul').bxSlider({
+					video : true,
+					speed : 500,
+					swipeThreshold : 50,
+					auto: true,
+					autoControls: false,
+					pager: false,
+					oneToOneTouch : false,
+					prevSelector : '.mainMovSlide .slidePrev',
+					nextSelector : '.mainMovSlide .slideNext',
+					prevText: '이전 동영상',
+					nextText: '다음 동영상'
+				});
+				</script>
+			</div>
+		</div>
+		<div class="mainContent mainTab">
+			<h2><span>루카스 인사이드</span></h2>
+			<div class="tabList">
+				<ul>
+					<li class="on"><a href="#">전 체</a></li>
+					<li><a href="#">클리닉 스케치</a></li>
+					<li><a href="#">열린재활 갤러리</a></li>
+					<li><a href="#">재활회복 리포트</a></li>
+				</ul>
+			</div>
+			<div class="tabCont">
+				<div class="current">
+					<ul>
+						<li class="item1 all">
+							<a href="/community/community01.html">
+								<strong>루카스 인사이드</strong>
+								<span>“ 만나 보세요, 루카스 가족들의 도전하는 하루 ”</span>
+							</a>
+						</li>
+						<?=$Main_Inside_all2?>
+						<?=$Main_Inside_all1?>
+						<?=$Main_Inside_all3?>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<?=$Main_Inside1?>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<?=$Main_Inside2?>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<?=$Main_Inside3?>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+	<?
+		$mobile_agent = '/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/';
+
+		// preg_match() 함수를 이용해 모바일 기기로 접속하였는지 확인
+		if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])) {
+			 include $_SERVER[DOCUMENT_ROOT]."/popup/popup_layer.php";
+		}else{
+			 include $_SERVER[DOCUMENT_ROOT]."/popup/popup_script.php";
+		}
+	?>
+</body>
+</html>

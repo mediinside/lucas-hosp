@@ -1,0 +1,26 @@
+<?
+	include_once  '../_init.php';
+	include_once $GP -> INC_WWW . '/head.php'; 
+?>
+</head>
+
+<body>
+	<div id="popWrap">
+		<div id="popHeader">
+			<h1>비밀번호 찾기</h1>
+		</div>
+		<div id="popContainer">
+			<p class="findResult">
+      	<?= $_GET['msg'];?>
+				<!-- strong class="resulTxt">임시비빌번호</strong>를 회원님의 <strong class="resulTxt">이메일</strong>로<br /> 전달 받으시겠습니까?
+				<span class="txt1">비밀번호 확인 요청을 하시면, 임시비밀번호가 발급됩니다.</span -->
+			</p>
+			<div class="btnWrap">
+				<span><a href="#;" onClick="window.close();" class="btnM btnConfirm">확인</a></span>
+				<!-- a href="#" class="btnP btnPg">취소</a -->
+			</div>
+		</div>
+		<button type="button" id="popClose">닫기</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/head.php'; 
+	include_once $GP -> CLS . 'class.member.php';
+	$C_Member = new Member();
+	
+	$args = "";
+	$args['mb_name'] = $_GET['mb_name'];
+	$args['mb_mobile'] = str_replace('-','',$_GET['mb_mobile']);	
+	$rst = $C_Member->Find_ID_Check($args);
+?>
+</head>
+
+<body>
+	<div id="popWrap">
+		<div id="popHeader">
+			<h1>아이디 찾기</h1>
+		</div>
+		<div id="popContainer">
+			<p class="findResult">
+				<?
+				if($rst) {
+        
+	        echo "회원님의 아이디는<br />";
+          
+        	for($i=0; $i<count($rst); $i++) {
+          	$mb_id = $rst[$i]['mb_id'];
+				?>
+					<strong class="resulTxt"><?=$mb_id?></strong><br />
+				<?        
+        	}					
+          
+          echo "입니다.";
+                  
+				}else{
+				?>
+				아이디가 존재하지 않습니다.
+				<?					
+        }
+				?>
+			</p>
+			<div class="btnWrap">
+				<span><a href="/member/login.html" onClick="window.opener.top.location.href=this, window.close();" class="btnM btnLogin" target="_blank">로그인</a></span>
+			</div>
+		</div>
+		<button type="button" id="popClose">닫기</button>
+	</div>
+</body>
+</html>

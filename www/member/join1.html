@@ -1,0 +1,79 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(7,1);
+});
+</script>
+</head>
+
+<body class="member">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<p class="location"><a href="#" class="home">홈</a> &gt; <span>회원</span> &gt; <strong>회원가입</strong></p>
+		<h1 class="pageTitle"><span>회원가입</span></h1>
+		<? include_once $GP -> INC_WWW . '/snb.php'; ?>
+		<div class="contents">
+			<div class="agreeSection">
+				<div class="agreeBox terms">
+					<h2 class="subTitle">이용약관</h4>
+					<div class="cont" tabindex="0">
+						<? include_once "agree1.txt";?>
+					</div>
+					<p class="agree">
+						<label><input type="checkbox" class="chk" value="Y" id="agree1" name="agree1" /> 위의 약관에 동의합니다.</label>
+					</p>
+				</div>
+				<div class="agreeBox privacy">
+					<h2 class="subTitle">개인정보 취급방침</h4>
+					<div class="cont" tabindex="0">
+						<? include_once "agree2.txt";?>
+					</div>
+					<p class="agree">
+						<label><input type="checkbox" class="chk" value="Y" id="agree2" name="agree2" /> 위의 약관에 동의합니다.</label>
+					</p>
+				</div>
+			</div>
+			<p class="agreeAll">이용약관 및 개인정보 취급방침에 <strong>모두 동의</strong>합니다. <a href="#;" class="btnM btnAllChk" id="agree3">전체동의</a></p>
+			<div class="btnWrap btn2">
+				<span><a href="#;" id="img_next" class="btnL btnLConfirm">확인</a></span>
+				<span><a href="/" class="btnL btnLCancel">취소</a></span>
+			</div>
+		</div>
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+
+	<form id="hd_frm" name="hd_frm" action="?" method="post">
+		<input type="hidden" name="agree" id="agree" />
+	</form>
+	<script type="text/javascript">
+	$(document).ready(function(){							   
+	  $('#img_next').click(function(){
+					  
+		if($('#agree1:checked').val() == undefined){
+		  alert('약관동의 하셔야 합니다');
+		  return false;
+		}
+		
+		if($('#agree2:checked').val() == undefined){
+		  alert('개인정보 취금방침에 동의 하셔야 합니다');
+		  return false;
+		}
+		
+		$('#agree').val('Y');
+		$('#hd_frm').attr('action','./join2.html');
+		$('#hd_frm').submit();
+		return false;		  
+	  });	
+	  
+	  
+	  $('#agree3').click(function(){										
+		$("input:checkbox").attr("checked", true);
+	  });							   
+	});
+	</script>
+</body>
+</html>

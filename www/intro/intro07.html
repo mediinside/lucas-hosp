@@ -1,0 +1,119 @@
+<?
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+	include_once $GP -> INC_WWW . '/head.php';  
+?>
+<script type="text/javascript">
+$(function(){
+	$('#header').gnb(1,7);
+});
+</script>
+</head>
+
+<body class="layout">
+	<? include_once $GP -> INC_WWW . '/header.php'; ?>
+	<div id="container">
+		<div class="contentsWrap">
+			<? include_once $GP -> INC_WWW . '/locMenu.php'; ?> 
+			<div class="contents">
+				<h1 class="pageTitle">찾아오시는 <span class="colorIdt">길</span></h1>
+				<div class="contSection">
+					<h2 class="subTitle"><strong>지도</strong>보기</h2>
+					<div class="section">
+						<!-- * Daum 지도 - 지도퍼가기 -->
+						<!-- 1. 지도 노드 -->
+						<div id="daumRoughmapContainer1445586746836" class="daumMap root_daum_roughmap root_daum_roughmap_landing"></div>
+
+						<!--
+							2. 설치 스크립트
+							* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+						-->
+						<script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
+
+						<!-- 3. 실행 스크립트 -->
+						<script charset="UTF-8">
+							new daum.roughmap.Lander({
+								"timestamp" : "1445586746836",
+								"key" : "694a",
+							}).render();
+						</script>
+						<p class="mapAdd">경기도 부천시 소사구 경인로 88 (송내동 389-2)  <br class="mobShow" /><span class="mobHide">/  </span>대표전화 : <strong>032) 310-0100</strong></p>
+					</div>
+				</div>
+				<div class="contSection mapSection first on">
+					<h2 class="subTitle mobShow"><strong>교통 이용</strong> 안내</h2>
+					<h2 class="subTitle mapMob"><strong>지하철</strong>이용</h2>
+					<div class="section">
+						<div class="roundBox mapBox">
+							<span class="mapIcon01">1</span>
+							<p class="font24 colorBlack">중동역, 부천역, 송내역</p>
+						</div>
+						<div class="subTitle3 iconTitle3">중동역에서 하차</div>
+						<p class="colorBlack">1번 출구(남부방향)로 나와 푸르지오 아파트 앞 인도를 따라 우측 방향으로 약 15M 정도 직진 후 보이는 큰 사거리에서 왼편에 보이는 국민은행 건물</p>
+						<div class="subTitle3 iconTitle3">부천역에서 하차</div>
+						<p class="colorBlack">부천 남부역으로 나와 53번/12-1번/88번 버스를 타시고 부천공고 입구 정류장에 하차 버스 진행방향으로 50M 직진 후 건너편 국민은행 건물</p>
+						<div class="subTitle3 iconTitle3">송내역에서 하차</div>
+						<p class="colorBlack">송내 북부역에 나와 53번/12-1번 버스를 타시고 중동역에 하차, 버스 진행 방향으로 직진 후 사거리에서 국민은행 건물</p>
+					</div>
+				</div>
+				<div class="contSection mapSection">
+					<h2 class="subTitle mapMob"><strong>버스</strong>이용</h2>
+					<div class="section">
+						<div class="roundBox mapBox">
+							<span class="mapIcon02">버스</span>
+							<p class="font24 colorBlack">송내사거리. 중동역 정류장</p>
+						</div>
+						<div class="subTitle3 iconTitle3">송내사거리. 중동역 정류장에서 하차</div>
+						<p class="colorBlack">6-1, 88, 88-1</p>
+						<div class="subTitle3 iconTitle3">중동역 정류장에서 하차</div>
+						<p class="colorBlack">3, 6-2, 12-1, 19, 25, 50, 53, 75</p>
+					</div>
+				</div>
+				<div class="contSection mapSection">
+					<h2 class="subTitle mapMob"><strong>승용차</strong>이용</h2>
+					<div class="section">
+						<div class="roundBox mapBox">
+							<span class="mapIcon03">승용차</span>
+							<p class="font24 colorBlack">경기도 부천시 소사구 경인로 88 <br class="mobShow" />(송내동 389-2) /  <strong class="colorIdt">032) 310-0100</strong></p>
+						</div>
+						<div class="subTitle3 iconTitle3">서울 방면</div>
+						<p class="colorBlack">
+							경인 고속도로 : 서운 IC 분당 방면 외곽 순환도로 이용 <br />
+							외곽 순환도로 : 송내 IC 부천 방면 → 경인로 서울 방면 <br />
+							경인국도를 타고 부천 남부역을 지나 송내 사거리에서 유턴하면 나오는 국민은행 건물
+						</p>
+						<div class="subTitle3 iconTitle3">인천 방면</div>
+						<p class="colorBlack">경인 국도를 타고 서울방면으로 오다가 송내 사거리에서 5M 직진하시면 보이는 국민은행 건물</p>
+					</div>
+				</div>
+				<script type="text/javascript">
+				$(function(){
+					var _this = $(this)
+					,winW = $(window).width();
+					if (winW < 767) {
+						$('.mapMob').click(function(){
+							var _this = $(this);
+							if (_this.parent().hasClass('on')) {
+								_this.next().slideUp(200);
+								_this.parent().removeClass('on');
+							} else {
+								_this.parent().addClass('on');
+								_this.next().slideDown(200);
+							}
+							return false;
+						});
+					}
+				});
+
+				</script>
+
+
+
+				
+			</div>
+		</div>
+
+	</div>
+	<? include_once $GP -> INC_WWW . '/footer.php'; ?>
+</body>
+</html>
